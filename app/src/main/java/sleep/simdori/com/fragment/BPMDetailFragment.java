@@ -26,7 +26,7 @@ public class BPMDetailFragment extends Fragment implements View.OnClickListener 
     // API
     private SharedPrefUtil pref = null;
     private AsyncTask<String, Void, Integer> mAsyncTask_SelectBPMDetail = null;
-
+    private Bundle bundle;
     // View
     Activity mActivity;
 
@@ -49,13 +49,13 @@ public class BPMDetailFragment extends Fragment implements View.OnClickListener 
     String[] bpmDetailArr;
     String bpmId;
     String userNameValue;
-    String dateValue = "2021-02-16 08:46:12";
-    String userStateValue = "걷기";
+    String dateValue ;
+    String userStateValue ;
     String bloodoxygenValue;
     String ArrhythmiaValue;
     String diagnosisValue;
     int bpmValue;
-    String stressValue = "98";
+    String stressValue ;
 
     @Override
     public void onStart() {
@@ -65,12 +65,31 @@ public class BPMDetailFragment extends Fragment implements View.OnClickListener 
         pref = new SharedPrefUtil(mActivity);
         userNameValue = pref.getValue(SharedPrefUtil.USER_ID, "");
         bpmId = pref.getValue("bpmId", "");
-        selectBPMDetail(userNameValue, bpmId);
-        setText();
+
     }
 
     public static sleep.simdori.com.fragment.BPMDetailFragment newInstance() {
         return new sleep.simdori.com.fragment.BPMDetailFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if(getArguments() != null){
+            bundle = new Bundle();
+            bundle=this.getArguments();
+            userNameValue = bundle.getString("userId");
+            dateValue = bundle.getString("date");
+            userStateValue = bundle.getString("state");
+            bloodoxygenValue = bundle.getString("blood_oxygen");
+            ArrhythmiaValue = bundle.getString("arrhythmia");
+            diagnosisValue = bundle.getString("diagnosis");
+            bpmValue = Integer.parseInt(bundle.getString("BPM"));
+            stressValue  = bundle.getString("stress");
+            System.out.println("stressValue  = bundle.getString(\"stress\") : "+stressValue);
+        }else{
+            System.out.println("getArguments() == null");
+        }
     }
 
     @Override
@@ -91,14 +110,12 @@ public class BPMDetailFragment extends Fragment implements View.OnClickListener 
         diagnosis = (TextView) v.findViewById(R.id.diagnosis);
         stateImg = (ImageView) v.findViewById(R.id.bpmdetailstateimg);
         bradycardia = (ImageView) v.findViewById(R.id.bradycardia);
-
-        setText();
-
         backButton = (Button) v.findViewById(R.id.bpmdetailbackbutton);
         backButton.setOnClickListener(this);
-
+        setText();
         return v;
     }
+
 
     @Override
     public void onClick(View v) {
@@ -111,31 +128,34 @@ public class BPMDetailFragment extends Fragment implements View.OnClickListener 
         }
     }
 
-    public void selectBPMDetail(String id, String no){
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-            mAsyncTask_SelectBPMDetail = new Get_BPMDetailAsynctask(getContext(), id, no).execute();
-        } else {
-            mAsyncTask_SelectBPMDetail = new Get_BPMDetailAsynctask(getContext(), id, no).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        }
-    }
-
     public void setText(){
 
         mActivity = getActivity();
         // API
-        pref = new SharedPrefUtil(mActivity);
-
-        bpmDetail = pref.getValue("bpmDetail", "");
-        bpmDetailArr = bpmDetail.split(",");
-
-        userNameValue = pref.getValue(SharedPrefUtil.USER_ID, "");
-        bpmValue = Integer.parseInt(bpmDetailArr[0]);
-        stressValue = bpmDetailArr[3];
-        dateValue = bpmDetailArr[1];
-        userStateValue = bpmDetailArr[2];
-        bloodoxygenValue = bpmDetailArr[4];
-        ArrhythmiaValue = bpmDetailArr[5];
-        diagnosisValue = bpmDetailArr[6];
+//        bundle = new Bundle();
+//        bundle=this.getArguments();
+//        bpmId=pref.getValue("bpmId","");
+//        userNameValue = bundle.getString("userId");
+//        dateValue = bundle.getString("date");
+//        userStateValue = bundle.getString("state");
+//        bloodoxygenValue = bundle.getString("blood_oxygen");
+//        ArrhythmiaValue = bundle.getString("arrhythmia");
+//        diagnosisValue = bundle.getString("diagnosis");
+//        bpmValue = Integer.parseInt(bundle.getString("BPM"));
+//        stressValue  = bundle.getString("stress");
+// ----------------------------------------------------------------------------------------------
+//        bpmDetail = pref.getValue("bpmDetail", "");//bpmDetail이란 key값이 없는데 말이지
+//        System.out.println("bpmDetailtest : "+bpmDetail);
+//        bpmDetailArr = bpmDetail.split(",");
+//        System.out.println("bpmDetailArrtest : "+bpmDetailArr[0]);
+//        userNameValue = pref.getValue(SharedPrefUtil.USER_ID, "");
+//        bpmValue = Integer.parseInt(bpmDetailArr[0]);
+//        stressValue = bpmDetailArr[3];
+//        dateValue = bpmDetailArr[1];
+//        userStateValue = bpmDetailArr[2];
+//        bloodoxygenValue = bpmDetailArr[4];
+//        ArrhythmiaValue = bpmDetailArr[5];
+//        diagnosisValue = bpmDetailArr[6];
 
         userName.setText(userNameValue);
         topUserName.setText(userNameValue);
@@ -173,10 +193,10 @@ public class BPMDetailFragment extends Fragment implements View.OnClickListener 
             tachycardia.setText("정상");
             tachycardia.setTextColor(Color.GREEN);
         }
-        if(bloodoxygenValue.equals("정상")){
-            bloodoxygen.setTextColor(Color.GREEN);
+        if(stressValue.equals("낮음")){
+            stress.setTextColor(Color.GREEN);
         }else{
-            bloodoxygen.setTextColor(Color.RED);
+            stress.setTextColor(Color.RED);
         }
         if(ArrhythmiaValue.equals("정상")){
             Arrhythmia.setTextColor(Color.GREEN);

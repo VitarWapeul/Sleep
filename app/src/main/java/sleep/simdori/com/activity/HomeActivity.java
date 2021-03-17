@@ -45,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 switch(item.getItemId()){
                     case R.id.action_home:
                         fragmentTransaction = fragmentManager.beginTransaction();
@@ -73,6 +74,13 @@ public class HomeActivity extends AppCompatActivity {
     public void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.mainFragment, fragment).commit();
+    }
+    //데이터 전달과 함께 화면전환
+    public void replaceFragment(Fragment fragment, Bundle bundle) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragment.setArguments(bundle);
         fragmentTransaction.replace(R.id.mainFragment, fragment).commit();
     }
 

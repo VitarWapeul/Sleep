@@ -66,7 +66,7 @@ public abstract class ImageProcessing {
      */
     public static double decodeYUV420SPtoRedBlueGreenAvg(byte[] yuv420sp, int width, int height, int type) {
         if (yuv420sp == null) return 0;
-        final int frameSize = width * height;
+        final double frameSize = width * height;
 
         int sum = decodeYUV420SPtoRedBlueGreenSum(yuv420sp, width, height, type);
 

@@ -43,12 +43,17 @@ import com.jjoe64.graphview.Viewport;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import org.apache.commons.math3.stat.descriptive.SummaryStatistics;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -61,6 +66,7 @@ import sleep.simdori.com.util.SharedPrefUtil;
 import sleep.simdori.com.util.ToastUtils;
 
 import static java.lang.Math.ceil;
+import static java.lang.Math.sqrt;
 
 
 public class MeasureFragment extends Fragment implements View.OnClickListener {
@@ -83,6 +89,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
     private ProgressBar pb;
     private AsyncTask<String, Void, Integer> mAsyncTask_InsertBPM = null;
 
+
     // Variables Initialization
     private static final String TAG = "HeartRateMonitor";
     private static final AtomicBoolean processing = new AtomicBoolean(false);
@@ -103,8 +110,12 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
     DateFormat dateFormat;
 
     // Values
-    String userNameValue = "vitarbest";
-    String id = "vitarbest";
+    // lns 20200303
+//    String userNameValue = "vitarbest";
+//    String id = "vitarbest";
+    // lns 20200303수정
+    String userNameValue;
+    String id;
     private String topic, message, userTopic, deviceTopic = null;
 
     //Toast
@@ -113,6 +124,14 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
     //Beats variable
     public int Beats = 0;
     public double bufferAvgB = 0;
+
+    // SPO2 variables
+    private static final double RedBlueRatio = 0;
+    double Stdr = 0;
+    double Stdb = 0;
+    double sumred = 0;
+    double sumblue = 0;
+    public int o2;
 
     //DataBase
     DatabaseHandler helper;
@@ -132,6 +151,8 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
     //Arraylist
     public ArrayList<Double> GreenAvgList = new ArrayList<Double>();
     public ArrayList<Double> RedAvgList = new ArrayList<Double>();
+    public ArrayList<Double> BlueAvgList = new ArrayList<Double>();
+    public ArrayList<Double> timestamp = new ArrayList<Double>();
     public String green;
     public String red;
     public int counter = 0;
@@ -194,23 +215,6 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    /**
-     * MQTT 서비스에 연결한 ServiceConnection를 unBind 처리한다.
-     * @see Activity
-     */
-    @Override
-    public void onStop() {
-        super.onStop();
-        if(AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "MainActivity - onStop()");
-
-        if (mBound) {
-            getActivity().unbindService(serviceConnection);
-            mBound = false;
-            if(AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "MainActivity - MQTT Unbinded Successfullly 1: " + serviceConnection.toString());
-        } else {
-            if(AppConst.DEBUG_ALL) Log.w(AppConst.TAG, "MainActivity - MQTT Unbinded Already but into here 3: " + serviceConnection.toString());
-        }
-    }
 
     @SuppressLint("InvalidWakeLockTag")
     @Override
@@ -224,6 +228,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
         queue = new LinkedList<Integer>();
         pref = new SharedPrefUtil(mActivity);
         userNameValue = pref.getValue(SharedPrefUtil.USER_ID, "");
+        id = pref.getValue(SharedPrefUtil.USER_ID,"");// lns 20200303추가
 
         userName = (TextView) v.findViewById(R.id.measureusername);
         backButton = (Button) v.findViewById(R.id.measurebackbutton);
@@ -280,9 +285,9 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
 
         // customize the viewport
         Viewport viewport = graph.getViewport();
-        viewport.setYAxisBoundsManual(true);
-        viewport.setMinY(0);
-        viewport.setMaxY(60);
+//        viewport.setYAxisBoundsManual(true);
+//        viewport.setMinY(0);
+//        viewport.setMaxY(60);
         viewport.setScrollable(true);
         viewport.setMinX(0);
 
@@ -303,20 +308,6 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
         return v;
     }
 
-    /* Heart Rate 측정*/
-    //Prevent the system from restarting your activity during certain configuration changes,
-    // but receive a callback when the configurations do change, so that you can manually update your activity as necessary.
-    //such as screen orientation, keyboard availability, and language
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-    }
-
-    //Wakelock + Open device camera + set orientation to 90 degree
-    //store system time as a start time for the analyzing process
-    //your activity to start interacting with the user.
-    // This is a good place to begin animations, open exclusive-access devices (such as the camera)
     @Override
     public void onResume() {
         super.onResume();
@@ -350,10 +341,6 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
         }).start();*/
     }
 
-    //call back the frames then release the camera + wakelock and Initialize the camera to null
-    //Called as part of the activity lifecycle when an activity is going into the background, but has not (yet) been killed. The counterpart to onResume().
-    //When activity B is launched in front of activity A,
-    // this callback will be invoked on A. B will not be created until A's onPause() returns, so be sure to not do anything lengthy here.
     @Override
     public void onPause() {
         super.onPause();
@@ -366,6 +353,48 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
         isRunning = false;
     }
 
+    /**
+     * MQTT 서비스에 연결한 ServiceConnection를 unBind 처리한다.
+     * @see Activity
+     */
+    @Override
+    public void onStop() {
+        super.onStop();
+        if(AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "MainActivity - onStop()");
+
+        if (mBound) {
+            getActivity().unbindService(serviceConnection);
+            mBound = false;
+            if(AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "MainActivity - MQTT Unbinded Successfullly 1: " + serviceConnection.toString());
+        } else {
+            if(AppConst.DEBUG_ALL) Log.w(AppConst.TAG, "MainActivity - MQTT Unbinded Already but into here 3: " + serviceConnection.toString());
+        }
+        insertBPM(id, green, red, String.valueOf(Beats));
+    }
+
+
+    /* Heart Rate 측정*/
+    //Prevent the system from restarting your activity during certain configuration changes,
+    // but receive a callback when the configurations do change, so that you can manually update your activity as necessary.
+    //such as screen orientation, keyboard availability, and language
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
+
+    //Wakelock + Open device camera + set orientation to 90 degree
+    //store system time as a start time for the analyzing process
+    //your activity to start interacting with the user.
+    // This is a good place to begin animations, open exclusive-access devices (such as the camera)
+
+
+    //call back the frames then release the camera + wakelock and Initialize the camera to null
+    //Called as part of the activity lifecycle when an activity is going into the background, but has not (yet) been killed. The counterpart to onResume().
+    //When activity B is launched in front of activity A,
+    // this callback will be invoked on A. B will not be created until A's onPause() returns, so be sure to not do anything lengthy here.
+
+
 
 
     //getting frames data from the camera and start the heartbeat process
@@ -374,6 +403,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
         /**
          * {@inheritDoc}
          */
+        @SuppressLint("LongLogTag")
         @Override
         public void onPreviewFrame(byte[] data, Camera cam) {
             //if data or size == null ****
@@ -390,12 +420,14 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
 
             double GreenAvg;
             double RedAvg;
-
+            double BlueAvg;
             GreenAvg = ImageProcessing.decodeYUV420SPtoRedBlueGreenAvg(data.clone(), height, width, 3); //1 stands for red intensity, 2 for blue, 3 for green
             RedAvg = ImageProcessing.decodeYUV420SPtoRedBlueGreenAvg(data.clone(), height, width, 1); //1 stands for red intensity, 2 for blue, 3 for green
-
+            sumred = sumred + RedAvg;
+            BlueAvg = ImageProcessing.decodeYUV420SPtoRedBlueGreenAvg(data.clone(), height, width, 2); //1 stands for red intensity, 2 for blue, 3 for green
+            sumblue = sumblue + BlueAvg;
             //그래프에 좌표 넣기
-            series.appendData(new DataPoint(lastX++,GreenAvg), true, 10);
+            series.appendData(new DataPoint(lastX++,GreenAvg), true, 50);
 
 //            //1초마다 raw 데이터 전송
 //            TimerTask mqttSend = new TimerTask() {
@@ -410,7 +442,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
 
             GreenAvgList.add(GreenAvg);
             RedAvgList.add(RedAvg);
-
+            BlueAvgList.add(BlueAvg);
 
             //MQTT를 통해 전송
 //            publishTopic("simdori/test", "테스트");
@@ -426,6 +458,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
 
             //To check if we got a good red intensity to process if not return to the condition and set it again until we get a good red intensity
             if (RedAvg < 200) {
+                startTime = System.currentTimeMillis();
                 inc = 0;
                 ProgP = (inc++) * 1 / 4;
                 counter = 0;
@@ -434,15 +467,18 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 tvProgressCircle.setText(strProgress);
                 processing.set(false);
             }
-
             long endTime = System.currentTimeMillis();
             double totalTimeInSecs = (endTime - startTime) / 1000d; //to convert time to seconds
+            Log.d("chcho currentTimeMillis", endTime+"\t"+GreenAvg+"\t"+RedAvg+"\t"+totalTimeInSecs);
+            timestamp.add(totalTimeInSecs);
             if (totalTimeInSecs >= 30) { //when 30 seconds of measuring passes do the following " we chose 30 seconds to take half sample since 60 seconds is normally a full sample of the heart beat
 
                 Double[] Green = GreenAvgList.toArray(new Double[GreenAvgList.size()]);
                 Double[] Red = RedAvgList.toArray(new Double[RedAvgList.size()]);
+                Double[] Blue = BlueAvgList.toArray(new Double[BlueAvgList.size()]);
                 Log.d("ppg green", Arrays.toString(Green));
                 Log.d("ppg red", Arrays.toString(Red));
+                Log.d("ppg blue", Arrays.toString(Blue));
                 green = Arrays.toString(Green);
                 red = Arrays.toString(Red);
                 SamplingFreq = (counter / totalTimeInSecs); //calculating the sampling frequency
@@ -451,11 +487,48 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 double bpm = (int) ceil(HRFreq * 60);
                 double HR1Freq = Fft.FFT(Red, counter, SamplingFreq);  // send the red array and get its fft then return the amount of heartrate per second
                 double bpm1 = (int) ceil(HR1Freq * 60);
+                double meanr = sumred / counter;
+                double meanb = sumblue / counter;
 
+                Log.d("chcho green", Arrays.toString(Green));
+                List<Double> peaks = PeakDetecion(GreenAvgList, timestamp,15);
+//                analyzeDataForSignals(GreenAvgList, timestamp,5, 3.5, 0.3);
+//                Log.d("chcho red", Arrays.toString(Red));
+//                PeakDetecion(RedAvgList, timestamp,15);
+//                analyzeDataForSignals(RedAvgList, timestamp, 5, 3.5, 0.3); // send the green array and get its fft then return the amount of heartrate per second
+                Log.d("chcho peaks", peaks.toString());
 
+                for (int i = 0; i < counter - 1; i++) {
+
+                    Double bufferb = Blue[i];
+
+                    Stdb = Stdb + ((bufferb - meanb) * (bufferb - meanb));
+
+                    Double bufferr = Red[i];
+
+                    Stdr = Stdr + ((bufferr - meanr) * (bufferr - meanr));
+
+                }
                 // The following code is to make sure that if the heartrate from red and green intensities are reasonable
                 // take the average between them, otherwise take the green or red if one of them is good
+                double varr = sqrt(Stdr / (counter - 1));
+                double varb = sqrt(Stdb / (counter - 1));
 
+                double R = (varr / meanr) / (varb / meanb);
+
+                double spo2 = 100 - 5 * (R);
+                o2 = (int) (spo2);
+//                if ((o2 < 80 || o2 > 99) || (bpm < 45 || bpm > 200)) {
+//                    inc = 0;
+//                    ProgP = inc;
+//                    ProgO2.setProgress(ProgP);
+//                    mainToast = Toast.makeText(getApplicationContext(), "Measurement Failed", Toast.LENGTH_SHORT);
+//                    mainToast.show();
+//                    startTime = System.currentTimeMillis();
+//                    counter = 0;
+//                    processing.set(false);
+//                    return;
+//                }
                 if ((bpm > 45 || bpm < 200)) {
                     if ((bpm1 > 45 || bpm1 < 200)) {
 
@@ -466,7 +539,6 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 } else if ((bpm1 > 45 || bpm1 < 200)) {
                     bufferAvgB = bpm1;
                 }
-
 //                if (bufferAvgB < 45 || bufferAvgB > 200) { //if the heart beat wasn't reasonable after all reset the progresspag and restart measuring
 //                    inc = 0;
 //                    ProgP = inc;
@@ -481,6 +553,8 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
 //                    return;
 //                }
 
+                o2 = (int) (spo2);
+                System.out.println("o2 : "+o2);
                 Beats = (int) bufferAvgB;
             }
 
@@ -488,14 +562,14 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
             String strProgress = "100 %";
             tvProgressCircle.setText(strProgress);
 
-            if (Beats != 0) { //if beasts were reasonable stop the loop and send HR with the username to results activity and finish this activity
+            if (Beats != 0 && o2 != 0) { //if beasts were reasonable stop the loop and send HR with the username to results activity and finish this activity
 
 
-                ((HomeActivity) getActivity()).replaceFragment(ResultFragment.newInstance());
+//                ((HomeActivity) getActivity()).replaceFragment(ResultFragment.newInstance());
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("bpm", Beats); // Put anything what you want
-
+                bundle.putInt("o2",o2);
                 ResultFragment resultFragment = new ResultFragment();
                 resultFragment.setArguments(bundle);
 
@@ -505,18 +579,6 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 dateFormat.setTimeZone(koreaTimeZone);
 
                 date = new Date();
-
-                insertBPM(id, green, red, String.valueOf(Beats));
-
-
-                //DB 저장
-                // 값을 배열로 추가해야함
-                /*sql = "INSERT INTO rawdata values('" + Beats + "', '" + String.valueOf(GreenAvgList) + "', '" + String.valueOf(RedAvgList) + "');";
-                db.execSQL(sql);*/
-//                sql = "INSERT INTO bpm_data values('" + Beats + "');";
-//                db.execSQL(sql);
-
-
 
                 getFragmentManager()
                         .beginTransaction()
@@ -529,10 +591,8 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 toast.cancel();
             }
 
-
-            if (RedAvg != 0) { //increment the progresspar
-
-                ProgP = (inc++) * 1 / 4;
+            if (RedAvg != 0) { //increment the progressbar
+                ProgP = (int) (totalTimeInSecs/30*100);
                 ProgHeart.setProgress(ProgP);
                 strProgress = ProgP + " %";
                 tvProgressCircle.setText(strProgress);
@@ -544,6 +604,61 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
             processing.set(false);
         }
     };
+
+    private List<Double> PeakDetecion(List<Double> HeartWaveform, List<Double> timestamp, int lag) {
+        List<Double> peaks = new ArrayList<Double>();
+        List<Double> rol_mean = new ArrayList<Double>(Collections.nCopies(HeartWaveform.size(), 0.0d));
+
+        // 이동평균 구하기
+        Double sum = 0.0;
+        for (int i=0; i<lag; i++) {
+            sum = sum + HeartWaveform.get(i);
+        }
+        for (int i=0; i<lag; i++) {
+            rol_mean.set(i, sum / lag);
+        }
+
+        for (int i=lag; i<HeartWaveform.size()-lag; i++) {
+            sum = 0.0;
+            for (int j=i-lag; j<i+lag; j++) {
+                sum = sum + HeartWaveform.get(j);
+            }
+            rol_mean.set(i, sum / (lag * 2));
+        }
+
+        sum = 0.0;
+        for (int i=HeartWaveform.size()-lag; i<HeartWaveform.size(); i++) {
+            sum = sum + HeartWaveform.get(i);
+        }
+        for (int i=HeartWaveform.size()-lag; i<HeartWaveform.size(); i++) {
+            rol_mean.set(i, sum / lag);
+        }
+
+        Double peak_x = 0.0;
+        Double peak_y = 0.0;
+        boolean peak_gruop = false;
+        for (int i=0; i<HeartWaveform.size(); i++) {
+            if (HeartWaveform.get(i) > rol_mean.get(i)) {
+                peak_gruop = true;
+                if (HeartWaveform.get(i) > peak_y) {
+                    peak_x = timestamp.get(i);
+                    peak_y = HeartWaveform.get(i);
+                }
+            } else {
+                if (peak_gruop) {
+                    peaks.add(peak_x);
+                }
+                peak_gruop = false;
+                peak_x = 0.0;
+                peak_y = 0.0;
+            }
+        }
+        if (peak_gruop) {
+            peaks.add(peak_x);
+        }
+        Log.d("chcho PeakDetecion", peaks+"");
+        return peaks;
+    }
 
     private SurfaceHolder.Callback surfaceCallback = new SurfaceHolder.Callback() {
 

@@ -35,6 +35,7 @@ import sleep.simdori.com.AppConst;
 import sleep.simdori.com.R;
 import sleep.simdori.com.activity.HomeActivity;
 import sleep.simdori.com.activity.LoginActivity;
+import sleep.simdori.com.dialog.CustomDialog_State;
 import sleep.simdori.com.mqtt.MQTTservice;
 import sleep.simdori.com.util.SharedPrefUtil;
 import sleep.simdori.com.util.ToastUtils;
@@ -51,14 +52,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     DateFormat dateFormat;
 
     // View
-    TextView userNameTextView;
-    TextView currentTime;
+    private TextView userNameTextView;
+    private TextView currentTime;
+    private TextView customDialog_state_walk_tv;
+    private TextView customDialog_state_relax_tv;
+    private TextView customDialog_state_exercise_tv;
+    private TextView customDialog_state_chill_tv;
 
     // Values
     String device_mac;
     String userNameValue;
 
     // API
+    private CustomDialog_State customDialog_state;
     private SharedPrefUtil pref = null;
     private LinkedList<Integer> queue = null;
 
@@ -159,6 +165,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
         }
         // API
+        customDialog_state = new CustomDialog_State(getActivity());
         queue = new LinkedList<Integer>();
         pref = new SharedPrefUtil(getActivity());
         device_mac = pref.getValue(SharedPrefUtil.DEVICE_MAC, "");
@@ -217,6 +224,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         sleepMeasureStartButton.setOnClickListener(this);
         Button mmWaveBackupButton = (Button) v.findViewById(R.id.mmWaveBackupButton);
         mmWaveBackupButton.setOnClickListener(this);
+
         return v;
     }
 
@@ -226,6 +234,89 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch(trackingButton.getId()){
             case R.id.bpmMeasureButton:
             {
+//                //아래 코드 소통의 부재로인한 필요없는 기능으로 주석처리
+//                customDialog_state.show();
+//                // 걷기클릭 시
+//                customDialog_state.getCustomDialog_state_walk_tv().setOnClickListener(new TextView.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        customDialog_state.getCustomDialog_state_walk_tv().setBackground(getResources().getDrawable(R.drawable.round_top_left_black));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        //글자색설정
+//                        customDialog_state.getCustomDialog_state_walk_tv().setTextColor(getResources().getColor(R.color.white));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        if (AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "HomeFragment - 현재상태 입력");
+//                    }
+//                });
+//                // 휴식클릭 시
+//                customDialog_state.getCustomDialog_state_relax_tv().setOnClickListener(new Button.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        customDialog_state.getCustomDialog_state_walk_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setBackground(getResources().getDrawable(R.drawable.round_top_left_black));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        //글자색설정
+//                        customDialog_state.getCustomDialog_state_walk_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setTextColor(getResources().getColor(R.color.white));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        if (AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "HomeFragment - 현재상태 입력");
+//                    }
+//                });
+//                // 운동클릭 시
+//                customDialog_state.getCustomDialog_state_exercise_tv().setOnClickListener(new Button.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        //배경색설정
+//                        customDialog_state.getCustomDialog_state_walk_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setBackground(getResources().getDrawable(R.drawable.round_top_left_black));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        //글자색설정
+//                        customDialog_state.getCustomDialog_state_walk_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setTextColor(getResources().getColor(R.color.white));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setTextColor(getResources().getColor(R.color.hint));
+//
+//                        if (AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "HomeFragment - 현재상태 입력");
+//                    }
+//                });
+//                // 이완클릭 시
+//                customDialog_state.getCustomDialog_state_chill_tv().setOnClickListener(new Button.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        customDialog_state.getCustomDialog_state_walk_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setBackground(getResources().getDrawable(R.drawable.round_top_right_white));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setBackground(getResources().getDrawable(R.drawable.round_top_left_black));
+//                        //글자색설정
+//                        customDialog_state.getCustomDialog_state_walk_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_relax_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_exercise_tv().setTextColor(getResources().getColor(R.color.hint));
+//                        customDialog_state.getCustomDialog_state_chill_tv().setTextColor(getResources().getColor(R.color.white));
+//                        if (AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "HomeFragment - 현재상태 입력");
+//                    }
+//                });
+//                // 닫기클릭 시
+//                customDialog_state.getCustomDialog_state_btn_Cancel().setOnClickListener(new Button.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        customDialog_state.dismiss();
+//                    }
+//                });
+//                // 확인클릭 시
+//                customDialog_state.getCustomDialog_state_btn_Confirm().setOnClickListener(new Button.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        customDialog_state.dismiss();
+//                        ((HomeActivity)getActivity()).replaceFragment(MeasureFragment.newInstance());
+//                    }
+//                });
                 ((HomeActivity)getActivity()).replaceFragment(MeasureFragment.newInstance());
 //                getActivity().startActivity(new Intent(getActivity(), SleepTrackingActivity.class));
                 break;
@@ -254,6 +345,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             
         }
     }
+
 
 
     /**

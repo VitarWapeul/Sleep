@@ -102,7 +102,7 @@ public class Get_BPMDetailAsynctask extends AsyncTask<String, Void, Integer> {
                     String bpm = responseJSON.getString("value");
                     bpm = bpm.replaceAll("\\[", "").replaceAll("\\]","").replaceAll("\"","");
                     pref.put("bpmDetail", bpm);
-                    System.out.println(bpm);
+                    System.out.println("bpmDetail : "+bpm);
 
                     if (resultCode.equals(AppConst.Network_ResultMSG_Success)) {
                         return AppConst.Network_Success;

@@ -96,6 +96,7 @@ public class AppConst {
     // URL - DB
     public static final int DB_Port = 3000;
     public static final String InsertBPM_host = "http://" + simdori_API_Host + ":" + DB_Port + "/insertBPM";
+    public static final String InsertBPMDetail_host = "http://" + simdori_API_Host + ":" + DB_Port + "/insertBPMDetail";
     public static final String Select_BPM_host = "http://" + simdori_API_Host + ":" + DB_Port + "/selectBPM";
     public static final String Select_BPMDetail_host = "http://" + simdori_API_Host + ":" + DB_Port + "/selectBPMDetail";
     public static final String registerDevice_host = "http://" + simdori_API_Host + ":" + DB_Port + "/registerDevice";

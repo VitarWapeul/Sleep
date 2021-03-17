@@ -30,7 +30,6 @@ public class Set_BPMAsyncTask extends AsyncTask {
     private int retry_request = 0;
     private String response, resultCode, resultMsg = "";
 
-    // Views
     private Context context;
     private ProgressBar pb;
 
@@ -63,28 +62,29 @@ public class Set_BPMAsyncTask extends AsyncTask {
         // 연결 정보
         json = new JsonConnect(context, AppConst.InsertBPM_host);
 
-    }public Set_BPMAsyncTask(String id, String green, String red, String BPM) {
-        this.context = context;
-        this.pb = pb;
-        this.id = id;
-        this.green = green;
-        this.red = red;
-        this.BPM = BPM;
-
-        Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        TimeZone koreaTimeZone = TimeZone.getTimeZone("Asia/Seoul");
-        dateFormat.setTimeZone(koreaTimeZone);
-        this.dateTime = dateFormat.format(date);
-
-        // 재시도 횟수
-        pref = new SharedPrefUtil(context);
-        retry_request = pref.getValue(SharedPrefUtil.RETRY_REQUEST+"InsertBPM", 0);
-
-        // 연결 정보
-        json = new JsonConnect(context, AppConst.InsertBPM_host);
-
     }
+//    public Set_BPMAsyncTask(String id, String green, String red, String BPM) {
+//        this.context = context;
+//        this.pb = pb;
+//        this.id = id;
+//        this.green = green;
+//        this.red = red;
+//        this.BPM = BPM;
+//
+//        Date date = new Date();
+//        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        TimeZone koreaTimeZone = TimeZone.getTimeZone("Asia/Seoul");
+//        dateFormat.setTimeZone(koreaTimeZone);
+//        this.dateTime = dateFormat.format(date);
+//
+//        // 재시도 횟수
+//        pref = new SharedPrefUtil(context);
+//        retry_request = pref.getValue(SharedPrefUtil.RETRY_REQUEST+"InsertBPM", 0);
+//
+//        // 연결 정보
+//        json = new JsonConnect(context, AppConst.InsertBPM_host);
+//
+//    }
 
     @Override
     protected Object doInBackground(Object[] objects) {

@@ -9,7 +9,7 @@
         android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -40,7 +40,7 @@
         android:required="false" />
 
     <application
-        android:name="androidx.multidex.MultiDexApplication"
+        android:name="sleep.simdori.com.util.SNSLogin"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -57,6 +57,16 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c" />
             </intent-filter>
         </activity>
         <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
@@ -70,8 +80,7 @@
             android:name="sleep.simdori.com.activity.SleepTrackingActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
         <activity android:name="sleep.simdori.com.activity.RegisterActivity" />
-        <activity android:name="sleep.simdori.com.activity.IotManageActivity" >
-        </activity>
+        <activity android:name="sleep.simdori.com.activity.IotManageActivity" />
 
         <!-- Mqtt Service -->
         <service android:name="org.eclipse.paho.android.service.MqttService" >

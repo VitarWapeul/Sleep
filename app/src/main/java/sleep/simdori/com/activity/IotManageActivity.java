@@ -101,7 +101,7 @@ public class IotManageActivity extends Activity {
             if(result.getContents() == null) {
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "기기가 등록되었습니다.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "기기가 등록되었습니다.", Toast.LENGTH_LONG).show();
                 device_mac = result.getContents();
                 registerDevice(userName, device_mac);
             }

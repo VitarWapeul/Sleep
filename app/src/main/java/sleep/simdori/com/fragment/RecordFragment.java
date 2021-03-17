@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import com.anychart.charts.Pie;
 import com.github.mikephil.charting.charts.LineChart;
@@ -46,7 +47,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
     // API
     private SharedPrefUtil pref = null;
-    private AsyncTask<String, Void, Integer> mAsyncTask_getSleepDaily = null;
+    private Get_SleepDailyAsynctask mAsyncTask_getSleepDaily = null;
 
     int[] colorArray = new int[] {Color.parseColor("#7030A0"), Color.parseColor("#53595E")};
 
@@ -110,11 +111,17 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         userName = pref.getValue(SharedPrefUtil.USER_ID, "");
         device_mac = pref.getValue(SharedPrefUtil.DEVICE_MAC, "");
         date = pref.getValue(SharedPrefUtil.DATE, "");
-        getSleepDaily(userName, device_mac, date);
+        System.out.println("RecordFragment_device_mac : "+device_mac);
+        if(device_mac==""){
+            Toast.makeText(getContext(),"등록된 기기가 없습니다.",Toast.LENGTH_LONG).show();
+            ((HomeActivity)getActivity()).replaceFragment(HomeFragment.newInstance());
+        }
 
+        getSleepDaily(userName, device_mac, date);
         sleepDataStr = pref.getValue(SharedPrefUtil.SLEEP, "");
-        System.out.println(sleepDataStr);
+        System.out.println("sleepDataStr : "+sleepDataStr);
         sleepData = sleepDataStr.split(",");
+
 
         if(sleepData.length >= 11){
             //DB에서 가져온 데이터 보기 쉽게 처리
@@ -278,9 +285,9 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
     public void getSleepDaily(String id, String device_mac, String date){
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-            mAsyncTask_getSleepDaily = new Get_SleepDailyAsynctask(getContext(), id, device_mac, date).execute();
+            mAsyncTask_getSleepDaily = new Get_SleepDailyAsynctask(getContext(), id, device_mac, date);
         } else {
-            mAsyncTask_getSleepDaily = new Get_SleepDailyAsynctask(getContext(), id, device_mac, date).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            mAsyncTask_getSleepDaily = new Get_SleepDailyAsynctask(getContext(), id, device_mac, date);
         }
         // db에서 데이터를 가져오는 순간 값을 가져오는 딜레이 시간이 필요
         try {
@@ -289,5 +296,18 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
     }
+//    public void getSleepDaily(String id, String device_mac, String date){
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+//            mAsyncTask_getSleepDaily = new Get_SleepDailyAsynctask(getContext(), id, device_mac, date).execute();
+//        } else {
+//            mAsyncTask_getSleepDaily = new Get_SleepDailyAsynctask(getContext(), id, device_mac, date).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//        }
+//        // db에서 데이터를 가져오는 순간 값을 가져오는 딜레이 시간이 필요
+//        try {
+//            Thread.sleep(50);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }

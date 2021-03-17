@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -29,6 +30,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.tasks.Task;
 
+import java.time.Clock;
+
 import sleep.simdori.com.R;
 import sleep.simdori.com.activity.HomeActivity;
 import sleep.simdori.com.activity.LoginActivity;
@@ -41,6 +44,8 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
     // API
     private SharedPrefUtil pref = null;
     private AsyncTask<String, Void, Integer> mAsyncTask_SelectBPM = null;
+    private BPMDetailFragment bpmDetailFragment;
+    private Bundle bundle;
 
     // View
     TextView userNameText;
@@ -52,11 +57,17 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
 
     // Values
     int count = 0;
-    String bpm = "78";
+    //    String bpm = "78";
+//    String[] bpmResult;
+//    String userName = "vitarbest";
+//    String state = "걷기";
+//    String date = "2021년 02월 10일 10:38";
+    //lns 210303 수정
+    String bpm;
     String[] bpmResult;
-    String userName = "vitarbest";
-    String state = "걷기";
-    String date = "2021년 02월 10일 10:38";
+    String userName;
+    String state;
+    String date;
 
     // Dynamic View
     LayoutInflater mInflater;
@@ -80,14 +91,17 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
         userNameText.setText(userName);
 
         selectBPM(getContext(), v, userName);
-
-        bpm = pref.getValue("bpmResult", "");
-        System.out.println(bpm);
+        Log.d("lns(SelectBPM)",mAsyncTask_SelectBPM.toString());
+        bpm = pref.getValue("bpmResult", "");//뭘 가져오는거지ㅇㅅㅇ
+        date = pref.getValue(SharedPrefUtil.DATE,"");//lns 210303 추가
+        Log.d("lns(bpm)",bpm);
         bpmResult = bpm.split(",");
-
-        if(bpmResult.length >= 3){
-            for(int i = 0; i < bpmResult.length; i = i + 4){
-                createView(getContext(), v, bpmResult[i], bpmResult[i + 1], userName, bpmResult[i + 3], bpmResult[i + 2]);
+        for(int i = 0; i < bpmResult.length; i = i + 8) {
+            System.out.println( "bpmResult[] : "+bpmResult[i] +" : "+ bpmResult[i + 1] +" : "+ userName +" : "+ bpmResult[i + 2] +" : "+ bpmResult[i + 3] +" : "+ bpmResult[i + 4] +" : "+ bpmResult[i + 5] +" : "+ bpmResult[i + 6] +" : "+ bpmResult[i + 7]);
+        }
+        if(bpmResult.length >= 7){
+            for(int i = 0; i < bpmResult.length; i = i + 8){//id, BPM, state, blood_oxygen, stress, arrhythmia, date_time, diagnosis
+                createView(getContext(), v, bpmResult[i], bpmResult[i + 1], userName, bpmResult[i + 2], bpmResult[i + 3], bpmResult[i + 4], bpmResult[i + 5], bpmResult[i + 6], bpmResult[i + 7]);
             }
         }
 
@@ -109,7 +123,9 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
 
 
     // 서버 DB에 저장된 데이터를 가져와 동적으로 View를 생성하여 보여주는 함수
-    public void createView(Context context, View v, String bpmId, String bpm, String name, String state, String date){
+//    public void createView(Context context, View v, String bpmId, String BPM, String name, String date, String state, String stress, String blood_oxygen, String arrhythmia, String diagnosis){
+    public void createView(Context context, View v, String bpmId, String BPM, String name, String date, String state, String stress, String blood_oxygen, String arrhythmia, String diagnosis){
+        System.out.println("BPMResultFragment_createView : "+name +" : "+ BPM +" : "+ date +" : "+ state +" : "+ stress +" : "+ blood_oxygen +" : "+ arrhythmia +" : "+ diagnosis +" : "+ bpmId);
 
         LinearLayout mRootLinear = (LinearLayout) v.findViewById(R.id.bpmresultlayout);
 
@@ -122,10 +138,23 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 pref.put("bpmId", bpmId);
-                ((HomeActivity)getActivity()).replaceFragment(BPMDetailFragment.newInstance());
+//                ((HomeActivity)getActivity()).replaceFragment(BPMDetailFragment.newInstance());
+                //lns 210303추가
+                bundle = new Bundle();
+                bundle.putString("userId",name);
+                bundle.putString("BPM",BPM);
+                bundle.putString("date",date);
+                bundle.putString("state",state);
+                bundle.putString("stress",stress);
+                bundle.putString("blood_oxygen",blood_oxygen);
+                bundle.putString("arrhythmia",arrhythmia);
+                bundle.putString("diagnosis",diagnosis);
+                System.out.println("v.getId() : "+v.getId());
+                ((HomeActivity)getActivity()).replaceFragment(BPMDetailFragment.newInstance(),bundle);
+
             }
         });
-        BPMRootLayout.setBackgroundDrawable(ContextCompat.getDrawable(getContext(), R.drawable.border));
+        BPMRootLayout.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.border));
         BPMRootLayout.setPadding(10, 20, 10, 20);
         BPMRootLayout.setGravity(Gravity.CENTER);
         BPMElementLayout.setOrientation(LinearLayout.HORIZONTAL);
@@ -140,7 +169,7 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
         TextView userState = new TextView((context.getApplicationContext()));
         TextView dateView = new TextView((context.getApplicationContext()));
 
-        bpmValue.setText(bpm);
+        bpmValue.setText(BPM);
         bpmValue.setTextSize(45);
         bpmstr.setText("bpm");
         bpmstr.setTextSize(23);
@@ -148,7 +177,6 @@ public class BPMResultFragment extends Fragment implements View.OnClickListener 
         // state에 따라서 그림 다르게 해야함
         if(state.equals("걷기")){
             userImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.walk));
-
         }else if(state.equals("휴식")){
 
         }else if(state.equals("이완")){

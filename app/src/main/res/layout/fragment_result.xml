@@ -135,7 +135,7 @@
                 android:id="@+id/oxpercenttxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="95%"
+                android:text=""
                 android:textColor="#3C98BD"
                 android:textSize="15dp" />
         </LinearLayout>

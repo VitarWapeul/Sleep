@@ -58,11 +58,11 @@ public class Set_RegisterAsyncTask extends AsyncTask<String, Void, Integer> {
         this.pw = pw;
         this.email = email;
         this.phone = phone;
-
+        System.out.println("Set_RegisterAsyncTask context : "+context.getPackageName());
         // 재시도 횟수
         pref = new SharedPrefUtil(context);
         retry_request = pref.getValue(SharedPrefUtil.RETRY_REQUEST+"Register", 0);
-
+        System.out.println("retry_request : "+retry_request);
         // 연결 정보
         json = new JsonConnect(context, AppConst.Signup_host);
 
@@ -91,7 +91,7 @@ public class Set_RegisterAsyncTask extends AsyncTask<String, Void, Integer> {
         // 재시도 횟수
         pref = new SharedPrefUtil(context);
         retry_request = pref.getValue(SharedPrefUtil.RETRY_REQUEST+"Register", 0);
-
+        System.out.println("재시도 횟수 : " + retry_request);
         // 연결 정보
         json = new JsonConnect(context, AppConst.Signup_host);
 
@@ -123,6 +123,7 @@ public class Set_RegisterAsyncTask extends AsyncTask<String, Void, Integer> {
     protected Integer doInBackground(String... arg0) {
         // 재시도 횟수를 초과하는 경우, 사용자에게 알림 후 종료
         if(retry_request > AppConst.Network_Retry_Baseline) {
+            System.out.println("재시도횟수초과!!!");
             return AppConst.Network_Failed_RetryOver;
         } else {
             try {
@@ -143,12 +144,14 @@ public class Set_RegisterAsyncTask extends AsyncTask<String, Void, Integer> {
                     responseJSON = new JSONObject(response);
                     resultCode = responseJSON.getString("resultCode");
                     resultMsg = responseJSON.getString("resultMsg");
+                    System.out.println("resultCode : "+ resultCode);
                     if (resultCode.equals(AppConst.Network_ResultMSG_Success)) {
                         return AppConst.Network_Success;
                     } else {
                         return AppConst.Network_Failed_Data;
                     }
                 } else {
+                    System.out.println("response = null ");
                     return AppConst.Network_Failed_Response;
                 }
             } catch (Exception e) {
@@ -229,4 +232,3 @@ public class Set_RegisterAsyncTask extends AsyncTask<String, Void, Integer> {
         }
     }
 }
-

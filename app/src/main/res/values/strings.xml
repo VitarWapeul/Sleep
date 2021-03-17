@@ -16,6 +16,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="kakao_app_key">9a28f2e77dbb8f62e5f55f9efc9ecf6c</string>
+
     <string name="naver_client_id">KdNUVYxu9X4QpHg8s8eD</string>
     <string name="naver_client_secret">a798KvMmAJ</string>
     <string name="naver_client_name">COOLCOOL</string>
@@ -54,6 +56,12 @@
     <!-- facebook -->
     <string name="Btn_Facebook_Login">페이스북 로그인</string>
     <string name="Btn_Facebook_Logout">페이스북 로그아웃</string>
+
+    <!-- state -->
+    <string name="State_walk">걷기</string>
+    <string name="State_relax">휴식</string>
+    <string name="State_exercise">운동</string>
+    <string name="State_chill">이완</string>
 
     <!-- Login & Register -->
     <string name="ID_hint">아이디</string>

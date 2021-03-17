@@ -4,12 +4,16 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,9 +34,13 @@ import com.google.android.gms.tasks.Task;
 import com.nhn.android.naverlogin.OAuthLogin;
 import com.nhn.android.naverlogin.OAuthLoginHandler;
 
+import java.security.MessageDigest;
+import java.util.Locale;
+
 import sleep.simdori.com.AppConst;
 import sleep.simdori.com.AppUI;
 //import sleep.simdori.com.DatabaseOpenHelper;
+import sleep.simdori.com.asynctask.Set_RegisterAsyncTask;
 import sleep.simdori.com.util.DatabaseHandler;
 
 import sleep.simdori.com.R;
@@ -44,6 +52,7 @@ import sleep.simdori.com.dialog.CustomDialog_Search;
 import sleep.simdori.com.mqtt.MQTTservice;
 import sleep.simdori.com.util.Network;
 import sleep.simdori.com.util.PopupUtils;
+import sleep.simdori.com.util.SNSLogin;
 import sleep.simdori.com.util.SharedPrefUtil;
 import sleep.simdori.com.util.ToastUtils;
 
@@ -64,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
     LinearLayout naverLoginButton;
     LinearLayout googleLoginButton;
+    LinearLayout kakaoLoginButton;
     Button signupButton;
 
     // Views
@@ -75,9 +85,11 @@ public class LoginActivity extends AppCompatActivity {
     private SharedPrefUtil pref = null;
     private AsyncTask<String, Void, Integer> mAsyncTask_Version, mAsyncTask_Login, mAsyncTask_Register,
             mAsyncTask_WIFI, mAsyncTask_ID, mAsyncTask_PW = null;
-
+    private SNSLogin snsLogin;//로그인기능 모듈화하기 위한 시도
+    private RegisterActivity register;//sns로그인 유저정보 db에 넣기위함
     // Values
     private String id, email, phone = null;
+    private String token = null;
     private String user_id, user_pw = null;
     private int login_pw_save = 0, auto_login_save = 0;
     private CustomDialog_Search dialog_search;
@@ -188,6 +200,8 @@ public class LoginActivity extends AppCompatActivity {
         mActivity = this;
         if (AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "LoginActivity - onCreate()");
 
+        getAppKeyHash();//해쉬키얻기
+
         // 등록된 로그인정보 가져오기
         pref = new SharedPrefUtil(mActivity);
         user_id = pref.getValue(SharedPrefUtil.USER_ID, user_id);
@@ -205,6 +219,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.loginButton);
         naverLoginButton = (LinearLayout) findViewById(R.id.naverLoginButton) ;
         googleLoginButton = (LinearLayout) findViewById(R.id.googleLoginButton);
+        kakaoLoginButton = (LinearLayout) findViewById(R.id.kakaoLoginButton);
         signupButton = (Button) findViewById(R.id.gotoSignupButton);
         btnSearch = (Button) findViewById(R.id.findPwdButton);
 
@@ -300,7 +315,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //네이버로그인
         naverLoginButton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -342,11 +357,49 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        //구글로그인
+        // Build a GoogleSignInClient with the options specified by gso.
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        // Check for existing Google Sign In account, if the user is already signed in
+        // the GoogleSignInAccount will be non-null.
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
+        googleLoginButton.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                signIn();
+
+            }
+        });
+        //카카오로그인
+        // 초기화
+//        kakaoLoginButton.setOnClickListener(new Button.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                LoginClient.getInstance().loginWithKakaoTalk(context, (token, loginError) -> {
+//                    if (loginError != null) {
+//                        Log.e(TAG, "로그인 실패", loginError);
+//                    } else {
+//                        Log.d(TAG, "로그인 성공");
+//
+//                        // 사용자 정보 요청
+//                        UserApiClient.getInstance().me((user, meError) -> {
+//                            if (meError != null) {
+//                                Log.e(TAG, "사용자 정보 요청 실패", meError);
+//                            } else {
+//                                Log.i(TAG, user.toString());
+//                            }
+//                            return null;
+//                        });
+//                    }
+//                    return null;
+//                });
+//            }
+//        });
+        //회원가입 버튼 클릭
         signupButton.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
-                //회원가입 버튼 클릭
                 Toast toast = Toast.makeText(LoginActivity.this, "회원가입 화면으로 이동", Toast.LENGTH_SHORT);
                 toast.show();
                 Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
@@ -473,20 +526,23 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        // Check for existing Google Sign In account, if the user is already signed in
-        // the GoogleSignInAccount will be non-null.
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-
-        googleLoginButton.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                signIn();
-            }
-        });
     }
-
+    //해쉬키얻기
+    private void getAppKeyHash() {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md;
+                md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String something = new String(Base64.encode(md.digest(), 0));
+                Log.e("Hash key", something);
+            }
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            Log.e("name not found", e.toString());
+        }
+    }
     /**
      * 사용자가 입력한 아이디와 비밀번호로 로그인한다.
      *
@@ -507,18 +563,39 @@ public class LoginActivity extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+
     }
     // Configure sign-in to request the user's ID, email address, and basic
     // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
 
+    //RegisterActivity에서 그대로 가져옴 추후 깔끔히 수정필요
+    /**
+     * 회원가입 연결
+     * @param id	: 사용자 입력 아이디
+     * @param email : 사용자 입력 이메일
+     * @param pw	: 사용자 입력 비밀번호
+     * @throws None
+     * @return None
+     */
+    public void register(String id, String email, String pw, String phone) {
+        if (Build.VERSION.SDK_INT < AppConst.HONEYCOMB) {
+            mAsyncTask_Register = new Set_RegisterAsyncTask(mActivity, pb, id, email, pw, phone).execute();
+            System.out.println("첫번째register");
+        } else {
+            mAsyncTask_Register = new Set_RegisterAsyncTask(mActivity, pb, id, email, pw, phone).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            System.out.println("두번째register");
+        }
+    }
+    //로그인결과
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == RC_SIGN_IN) {//로그인이 성공했다면
             // The Task returned from this call is always completed, no need to attach
             // a listener.
+            System.out.println("구글로그인 성공");
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
@@ -526,10 +603,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);//여기서 구글유저정보를 받아옴
+            id = account.getEmail();//구글에서 가져올 id, 추후 적절한 값으로 수정필요
+            id = id.substring(0,id.indexOf("@"));
+            email = account.getEmail();//구글에서 가져올 email
+            token = account.getIdToken();
+            System.out.println("id : "+id+", email : "+email);
+            //db에 정보저장
+            register(id,email,"","");
             // Signed in successfully, show authenticated UI.
-            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);//구글로그인하면 홈으로 화면 전환
             startActivity(intent);
             finish();
 
@@ -537,7 +621,6 @@ public class LoginActivity extends AppCompatActivity {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             // google 로그인 실패시 처리
-
         }
     }
 

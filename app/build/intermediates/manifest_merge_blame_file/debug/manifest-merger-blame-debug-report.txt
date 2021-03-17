@@ -6,268 +6,286 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="17"
-8-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml
+8-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml
+9-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:5:5-65
-11-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:5:22-62
-12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:6:5-67
-12-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:6:22-64
+11-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:5:22-62
+12    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 사용 권한 설정 -->
+12-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:6:22-64
 13    <uses-permission android:name="android.permission.WAKE_LOCK" />
-13-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:7:5-67
-13-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:7:22-65
+13-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:7:22-65
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:8:5-78
-14-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:8:22-76
+14-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:8:5-78
+14-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:8:22-76
 15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-15-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:9:5-75
-15-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:9:22-72
+15-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:9:5-75
+15-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:9:22-72
 16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:10:5-78
-16-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:10:22-76
+16-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:10:5-78
+16-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:10:22-76
 17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-17-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:11:5-80
-17-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:11:22-78
+17-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:11:5-80
+17-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:11:22-78
 18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-18-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:12:5-80
-18-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:12:22-77
+18-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:12:5-80
+18-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:12:22-77
 19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-19-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:13:5-81
-19-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:13:22-78
+19-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:13:5-81
+19-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:13:22-78
 20
 21    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
 22    <uses-feature
-22-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:25:5-27:36
+22-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:25:5-27:36
 23        android:name="android.hardware.camera"
-23-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:26:9-47
+23-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:26:9-47
 24        android:required="false" />
-24-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:27:9-33
+24-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:27:9-33
 25    <uses-feature
-25-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:28:5-30:36
+25-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:28:5-30:36
 26        android:name="android.hardware.camera.front"
-26-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:29:9-53
+26-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:29:9-53
 27        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-27-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:30:9-33
+27-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:30:9-33
 28    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 29    <uses-feature
-29-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:33:5-35:36
+29-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:33:5-35:36
 30        android:name="android.hardware.camera.autofocus"
-30-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:34:9-57
+30-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:34:9-57
 31        android:required="false" />
-31-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:35:9-33
+31-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:35:9-33
 32    <uses-feature
-32-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:36:5-38:36
+32-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:36:5-38:36
 33        android:name="android.hardware.camera.flash"
-33-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:37:9-53
+33-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:37:9-53
 34        android:required="false" />
-34-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:38:9-33
+34-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:38:9-33
 35    <uses-feature
-35-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:39:5-41:36
+35-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:39:5-41:36
 36        android:name="android.hardware.screen.landscape"
-36-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:40:9-57
+36-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:40:9-57
 37        android:required="false" />
-37-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:41:9-33
+37-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:41:9-33
 38    <uses-feature
-38-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:42:5-44:36
+38-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:42:5-44:36
 39        android:name="android.hardware.wifi"
-39-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:43:9-45
+39-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:43:9-45
 40        android:required="false" />
-40-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:44:9-33
+40-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:44:9-33
 41
 42    <application
-42-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:15:5-57:19
-43        android:name="androidx.multidex.MultiDexApplication"
+42-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:15:5-63:19
+43        android:name="sleep.simdori.com.util.SNSLogin"
+43-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:24:9-38
 44        android:allowBackup="true"
-44-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:16:9-35
+44-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:16:9-35
 45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-45-->[androidx.core:core:1.3.2] C:\Users\best\.gradle\caches\transforms-2\files-2.1\ceb4d25cfc1ca46b00fb17888e1833f2\core-1.3.2\AndroidManifest.xml:24:18-86
+45-->[androidx.core:core:1.3.2] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\ceb4d25cfc1ca46b00fb17888e1833f2\core-1.3.2\AndroidManifest.xml:24:18-86
 46        android:debuggable="true"
 47        android:hardwareAccelerated="true"
-47-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:23:9-43
+47-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:23:9-43
 48        android:icon="@drawable/icon"
-48-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:17:9-38
+48-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:17:9-38
 49        android:label="@string/app_name"
-49-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:18:9-41
+49-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:18:9-41
 50        android:networkSecurityConfig="@xml/network_security_config"
-50-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:21:9-69
+50-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:21:9-69
 51        android:requestLegacyExternalStorage="true"
-51-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:22:9-52
+51-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:22:9-52
 52        android:supportsRtl="true"
-52-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:19:9-35
+52-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:19:9-35
 53        android:testOnly="true"
 54        android:theme="@style/Theme.Sleep" >
-54-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:20:9-43
+54-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:20:9-43
 55        <activity android:name="sleep.simdori.com.activity.LoadingActivity" >
-55-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:25:9-31:20
-55-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:25:19-59
+55-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:26:9-38:20
+55-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:26:19-59
 56            <intent-filter>
-56-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:26:13-30:29
+56-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:27:13-37:29
 57                <action android:name="android.intent.action.MAIN" />
-57-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:27:17-69
-57-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:27:25-66
+57-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:28:17-69
+57-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:28:25-66
 58
 59                <category android:name="android.intent.category.LAUNCHER" />
-59-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:29:17-77
-59-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:29:27-74
-60            </intent-filter>
-61        </activity>
-62        <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
-62-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:9-72
-62-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:19-60
-63        <activity android:name="sleep.simdori.com.activity.Guide2ndActivity" />
-63-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:33:9-72
-63-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:33:19-60
-64        <activity android:name="sleep.simdori.com.activity.HomeActivity" >
-64-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:34:9-35:20
-64-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:34:19-56
-65        </activity>
-66        <activity android:name="sleep.simdori.com.activity.LoginActivity" />
-66-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:36:9-69
-66-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:36:19-57
-67        <!-- <activity android:name=".activity.SignupActivity"></activity> -->
-68        <activity android:name="sleep.simdori.com.activity.ModifyActivity" />
-68-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:38:9-70
-68-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:38:19-58
-69        <activity
-69-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:39:9-40:81
-70            android:name="sleep.simdori.com.activity.SleepTrackingActivity"
-70-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:39:19-65
-71            android:theme="@style/AppTheme.SlidrActivityTheme" />
-71-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:40:19-69
-72        <activity android:name="sleep.simdori.com.activity.RegisterActivity" />
-72-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:9-72
-72-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:19-60
-73        <activity android:name="sleep.simdori.com.activity.IotManageActivity" >
-73-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:42:9-43:20
-73-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:42:19-61
-74        </activity>
-75
-76        <!-- Mqtt Service -->
-77        <service android:name="org.eclipse.paho.android.service.MqttService" >
-77-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:9-47:19
-77-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:18-77
-78        </service>
-79
-80        <receiver android:name="sleep.simdori.com.mqtt.BootReceiver" >
-80-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:9-53:20
-80-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:19-69
-81            <intent-filter>
-81-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:50:13-52:29
-82                <action android:name="android.intent.action.BOOT_COMPLETED" />
-82-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:51:17-78
-82-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:51:25-76
-83            </intent-filter>
-84        </receiver>
-85
-86        <service android:name="sleep.simdori.com.mqtt.MQTTservice" >
-86-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:55:9-56:19
-86-->C:\Users\best\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:55:18-67
+59-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:29:17-77
+59-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:29:27-74
+60
+61                <action android:name="android.intent.action.VIEW" />
+61-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:17-69
+61-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:25-66
+62
+63                <category android:name="android.intent.category.DEFAULT" />
+63-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:17-76
+63-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:27-73
+64                <category android:name="android.intent.category.BROWSABLE" />
+64-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:17-78
+64-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:27-75
+65
+66                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+67                <data
+67-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:17-36:77
+68                    android:host="oauth"
+68-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:23-43
+69                    android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c" />
+69-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:36:21-75
+70            </intent-filter>
+71        </activity>
+72        <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
+72-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:39:9-72
+72-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:39:19-60
+73        <activity android:name="sleep.simdori.com.activity.Guide2ndActivity" />
+73-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:40:9-72
+73-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:40:19-60
+74        <activity android:name="sleep.simdori.com.activity.HomeActivity" >
+74-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:9-42:20
+74-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:19-56
+75        </activity>
+76        <activity android:name="sleep.simdori.com.activity.LoginActivity" />
+76-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:43:9-69
+76-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:43:19-57
+77        <!-- <activity android:name=".activity.SignupActivity"></activity> -->
+78        <activity android:name="sleep.simdori.com.activity.ModifyActivity" />
+78-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:45:9-70
+78-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:45:19-58
+79        <activity
+79-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:9-47:81
+80            android:name="sleep.simdori.com.activity.SleepTrackingActivity"
+80-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:19-65
+81            android:theme="@style/AppTheme.SlidrActivityTheme" />
+81-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:47:19-69
+82        <activity android:name="sleep.simdori.com.activity.RegisterActivity" />
+82-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:48:9-72
+82-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:48:19-60
+83        <activity android:name="sleep.simdori.com.activity.IotManageActivity" />
+83-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:9-73
+83-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:19-61
+84
+85        <!-- Mqtt Service -->
+86        <service android:name="org.eclipse.paho.android.service.MqttService" >
+86-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:52:9-53:19
+86-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:52:18-77
 87        </service>
 88
-89        <activity
-89-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:17:9-19:67
-90            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
-90-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:18:13-76
-91            android:theme="@style/Theme.AppCompat.Light.Dialog" />
-91-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:19:13-64
-92        <activity
-92-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:20:9-23:47
-93            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
-93-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:21:13-88
-94            android:configChanges="orientation|screenSize"
-94-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:22:13-59
-95            android:label="OAuth2.0 In-app" />
-95-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:23:13-44
-96        <activity
-96-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:24:9-40:20
-97            android:name="com.nhn.android.naverlogin.ui.OAuthCustomTabActivity"
-97-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:25:13-80
-98            android:configChanges="orientation|screenSize"
-98-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:26:13-59
-99            android:launchMode="singleTask"
-99-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:27:13-44
-100            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-100-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:28:13-72
-101            <intent-filter>
-101-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:29:13-39:29
-102                <action android:name="android.intent.action.VIEW" />
-102-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:30:17-69
-102-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:30:25-66
-103
-104                <category android:name="android.intent.category.DEFAULT" />
-104-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:32:17-76
-104-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:32:27-73
-105                <category android:name="android.intent.category.BROWSABLE" />
-105-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:33:17-78
-105-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:33:27-75
-106                <!-- Intent URL 에서 로그인 액티비티를 실행하기 위해 설정 -->
-107                <data
-107-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:35:17-38:59
-108                    android:host="authorize"
-108-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:36:21-45
-109                    android:path="/"
-109-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:37:21-37
-110                    android:scheme="naver3rdpartylogin" />
-110-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\best\.gradle\caches\transforms-2\files-2.1\050c3922b104a9a8014c58faadec5df0\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:38:21-56
-111            </intent-filter>
-112        </activity>
-113        <activity
-113-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:47:9-53:63
-114            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-114-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:48:13-74
-115            android:clearTaskOnLaunch="true"
-115-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:49:13-45
-116            android:screenOrientation="sensorLandscape"
-116-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:50:13-56
-117            android:stateNotNeeded="true"
-117-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:51:13-42
-118            android:theme="@style/zxing_CaptureTheme"
-118-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:52:13-54
-119            android:windowSoftInputMode="stateAlwaysHidden" />
-119-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\05a1d6fed7b20b468b640b4c870366d9\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:53:13-60
-120        <activity
-120-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
-121            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-121-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
-122            android:excludeFromRecents="true"
-122-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
-123            android:exported="false"
-123-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
-124            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-124-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
-125        <!--
-126            Service handling Google Sign-In user revocation. For apps that do not integrate with
-127            Google Sign-In, this service will never be started.
-128        -->
-129        <service
-129-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
-130            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-130-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
-131            android:exported="true"
-131-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
-132            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-132-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
-133            android:visibleToInstantApps="true" />
-133-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
-134
-135        <activity
-135-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-136            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-136-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-137            android:exported="false"
-137-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-138            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-138-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\best\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-139
-140        <meta-data
-140-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\best\.gradle\caches\transforms-2\files-2.1\17162d086d16c68aa018eb1d701693f7\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
-141            android:name="com.google.android.gms.version"
-141-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\best\.gradle\caches\transforms-2\files-2.1\17162d086d16c68aa018eb1d701693f7\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
-142            android:value="@integer/google_play_services_version" />
-142-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\best\.gradle\caches\transforms-2\files-2.1\17162d086d16c68aa018eb1d701693f7\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
-143    </application>
-144
-145</manifest>
+89        <receiver android:name="sleep.simdori.com.mqtt.BootReceiver" >
+89-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:55:9-59:20
+89-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:55:19-69
+90            <intent-filter>
+90-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:56:13-58:29
+91                <action android:name="android.intent.action.BOOT_COMPLETED" />
+91-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:57:17-78
+91-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:57:25-76
+92            </intent-filter>
+93        </receiver>
+94
+95        <service android:name="sleep.simdori.com.mqtt.MQTTservice" >
+95-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:61:9-62:19
+95-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:61:18-67
+96        </service>
+97
+98        <activity
+98-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:17:9-19:67
+99            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+99-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:18:13-76
+100            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+100-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:19:13-64
+101        <activity
+101-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:20:9-23:47
+102            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+102-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:21:13-88
+103            android:configChanges="orientation|screenSize"
+103-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:22:13-59
+104            android:label="OAuth2.0 In-app" />
+104-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:23:13-44
+105        <activity
+105-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:24:9-40:20
+106            android:name="com.nhn.android.naverlogin.ui.OAuthCustomTabActivity"
+106-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:25:13-80
+107            android:configChanges="orientation|screenSize"
+107-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:26:13-59
+108            android:launchMode="singleTask"
+108-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:27:13-44
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+109-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:28:13-72
+110            <intent-filter>
+110-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:29:13-39:29
+111                <action android:name="android.intent.action.VIEW" />
+111-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:17-69
+111-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:25-66
+112
+113                <category android:name="android.intent.category.DEFAULT" />
+113-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:17-76
+113-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:27-73
+114                <category android:name="android.intent.category.BROWSABLE" />
+114-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:17-78
+114-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:27-75
+115                <!-- Intent URL 에서 로그인 액티비티를 실행하기 위해 설정 -->
+116                <data
+116-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:17-36:77
+117                    android:host="authorize"
+117-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:23-43
+118                    android:path="/"
+119                    android:scheme="naver3rdpartylogin" />
+119-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:36:21-75
+120            </intent-filter>
+121        </activity>
+122        <activity
+122-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:47:9-53:63
+123            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+123-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:48:13-74
+124            android:clearTaskOnLaunch="true"
+124-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:49:13-45
+125            android:screenOrientation="sensorLandscape"
+125-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:50:13-56
+126            android:stateNotNeeded="true"
+126-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:51:13-42
+127            android:theme="@style/zxing_CaptureTheme"
+127-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:52:13-54
+128            android:windowSoftInputMode="stateAlwaysHidden" />
+128-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:53:13-60
+129        <activity
+129-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
+130            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+130-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
+131            android:excludeFromRecents="true"
+131-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
+132            android:exported="false"
+132-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
+133            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+133-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
+134        <!--
+135            Service handling Google Sign-In user revocation. For apps that do not integrate with
+136            Google Sign-In, this service will never be started.
+137        -->
+138        <service
+138-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
+139            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+139-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
+140            android:exported="true"
+140-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
+141            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+141-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
+142            android:visibleToInstantApps="true" />
+142-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a28c3c65b82bbf0d085fee47aaecdc0e\jetified-play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
+143
+144        <activity
+144-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+145            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+145-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+146            android:exported="false"
+146-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+147            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+147-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\bd58b283a1cc043aa695c015854b6118\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+148
+149        <meta-data
+149-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\17162d086d16c68aa018eb1d701693f7\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+150            android:name="com.google.android.gms.version"
+150-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\17162d086d16c68aa018eb1d701693f7\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+151            android:value="@integer/google_play_services_version" />
+151-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\17162d086d16c68aa018eb1d701693f7\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+152    </application>
+153
+154</manifest>

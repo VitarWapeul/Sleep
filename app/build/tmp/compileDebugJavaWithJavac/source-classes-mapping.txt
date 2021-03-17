@@ -2,35 +2,30 @@ sleep/simdori/com/util/Network.java
  sleep.simdori.com.util.Network
 sleep/simdori/com/Math/PoleZeroPair.java
  sleep.simdori.com.Math.PoleZeroPair
-sleep/simdori/com/fragment/MeasureFragment.java
- sleep.simdori.com.fragment.MeasureFragment
- sleep.simdori.com.fragment.MeasureFragment$1
- sleep.simdori.com.fragment.MeasureFragment$2
- sleep.simdori.com.fragment.MeasureFragment$3
- sleep.simdori.com.fragment.MeasureFragment$4
- sleep.simdori.com.fragment.MeasureFragment$ServiceHandler
+sleep/simdori/com/asynctask/Set_IDAsyncTask.java
+ sleep.simdori.com.asynctask.Set_IDAsyncTask
 sleep/simdori/com/dialog/CustomDialog_Notify.java
  sleep.simdori.com.dialog.CustomDialog_Notify
 sleep/simdori/com/dialog/CustomDialog_Webview.java
  sleep.simdori.com.dialog.CustomDialog_Webview
 sleep/simdori/com/asynctask/Get_Group_Restore_AsyncTask.java
  sleep.simdori.com.asynctask.Get_Group_Restore_AsyncTask
-sleep/simdori/com/fragment/SettingFragment.java
- sleep.simdori.com.fragment.SettingFragment
- sleep.simdori.com.fragment.SettingFragment$1
-sleep/simdori/com/AppUI.java
- sleep.simdori.com.AppUI
+sleep/simdori/com/item/GetDeviceList.java
+ sleep.simdori.com.item.GetDeviceList
+ sleep.simdori.com.item.GetDeviceList$1
+sleep/simdori/com/Math/Vector.java
+ sleep.simdori.com.Math.Vector
 sleep/simdori/com/Math/Fft.java
  sleep.simdori.com.Math.Fft
-sleep/simdori/com/fragment/BPMResultFragment.java
- sleep.simdori.com.fragment.BPMResultFragment
- sleep.simdori.com.fragment.BPMResultFragment$1
+sleep/simdori/com/util/AES256Cipher.java
+ sleep.simdori.com.util.AES256Cipher
 sleep/simdori/com/Math/BandPassTransform.java
  sleep.simdori.com.Math.BandPassTransform
 sleep/simdori/com/Math/Maths.java
  sleep.simdori.com.Math.Maths
-sleep/simdori/com/fragment/MonitoringStatisticsFragment.java
- sleep.simdori.com.fragment.MonitoringStatisticsFragment
+sleep/simdori/com/activity/Guide2ndActivity.java
+ sleep.simdori.com.activity.Guide2ndActivity
+ sleep.simdori.com.activity.Guide2ndActivity$1
 sleep/simdori/com/asynctask/Get_IotAsynctask.java
  sleep.simdori.com.asynctask.Get_IotAsynctask
 sleep/simdori/com/asynctask/Set_LoginAsyncTask.java
@@ -61,10 +56,12 @@ sleep/simdori/com/Math/Butterworth.java
  sleep.simdori.com.Math.Butterworth$AnalogLowPass
 sleep/simdori/com/asynctask/Set_RegisterAsyncTask.java
  sleep.simdori.com.asynctask.Set_RegisterAsyncTask
+sleep/simdori/com/dialog/CustomDialog_State.java
+ sleep.simdori.com.dialog.CustomDialog_State
 sleep/simdori/com/asynctask/Get_BPMDetailAsynctask.java
  sleep.simdori.com.asynctask.Get_BPMDetailAsynctask
-sleep/simdori/com/asynctask/Get_SleepDailyAsynctask.java
- sleep.simdori.com.asynctask.Get_SleepDailyAsynctask
+sleep/simdori/com/asynctask/Set_BPMDetailAsyncTask.java
+ sleep.simdori.com.asynctask.Set_BPMDetailAsyncTask
 sleep/simdori/com/Math/Matrix.java
  sleep.simdori.com.Math.Matrix
 sleep/simdori/com/mqtt/BootReceiver.java
@@ -101,19 +98,21 @@ sleep/simdori/com/util/ToastUtils.java
  sleep.simdori.com.util.ToastUtils
 sleep/simdori/com/util/SSLUtil.java
  sleep.simdori.com.util.SSLUtil
-sleep/simdori/com/fragment/HomeFragment.java
- sleep.simdori.com.fragment.HomeFragment
- sleep.simdori.com.fragment.HomeFragment$1
- sleep.simdori.com.fragment.HomeFragment$2
- sleep.simdori.com.fragment.HomeFragment$3
- sleep.simdori.com.fragment.HomeFragment$ServiceHandler
+sleep/simdori/com/activity/SleepTrackingActivity.java
+ sleep.simdori.com.activity.SleepTrackingActivity
+ sleep.simdori.com.activity.SleepTrackingActivity$1
 sleep/simdori/com/BuildConfig.java
  sleep.simdori.com.BuildConfig
-sleep/simdori/com/activity/IotManageActivity.java
- sleep.simdori.com.activity.IotManageActivity
- sleep.simdori.com.activity.IotManageActivity$1
- sleep.simdori.com.activity.IotManageActivity$2
- sleep.simdori.com.activity.IotManageActivity$3
+sleep/simdori/com/util/PopupUtils.java
+ sleep.simdori.com.util.PopupUtils
+ sleep.simdori.com.util.PopupUtils$1
+ sleep.simdori.com.util.PopupUtils$2
+ sleep.simdori.com.util.PopupUtils$3
+ sleep.simdori.com.util.PopupUtils$4
+ sleep.simdori.com.util.PopupUtils$5
+ sleep.simdori.com.util.PopupUtils$6
+ sleep.simdori.com.util.PopupUtils$7
+ sleep.simdori.com.util.PopupUtils$WishWebViewClient
 sleep/simdori/com/util/ImageProcessing.java
  sleep.simdori.com.util.ImageProcessing
 sleep/simdori/com/item/GetMessageList.java
@@ -121,10 +120,9 @@ sleep/simdori/com/item/GetMessageList.java
  sleep.simdori.com.item.GetMessageList$1
 sleep/simdori/com/util/DatabaseHandler.java
  sleep.simdori.com.util.DatabaseHandler
-sleep/simdori/com/fragment/mmWaveSleepMeasureFragment.java
- sleep.simdori.com.fragment.mmWaveSleepMeasureFragment
- sleep.simdori.com.fragment.mmWaveSleepMeasureFragment$1
- sleep.simdori.com.fragment.mmWaveSleepMeasureFragment$ServiceHandler
+sleep/simdori/com/item/GetGroupList.java
+ sleep.simdori.com.item.GetGroupList
+ sleep.simdori.com.item.GetGroupList$1
 sleep/simdori/com/Math/BandStopTransform.java
  sleep.simdori.com.Math.BandStopTransform
 sleep/simdori/com/activity/RegisterActivity.java
@@ -156,19 +154,16 @@ sleep/simdori/com/activity/RegisterActivity.java
  sleep.simdori.com.activity.RegisterActivity$9
 sleep/simdori/com/Math/MathSupplement.java
  sleep.simdori.com.Math.MathSupplement
-sleep/simdori/com/activity/HomeActivity.java
- sleep.simdori.com.activity.HomeActivity
- sleep.simdori.com.activity.HomeActivity$1
- sleep.simdori.com.activity.HomeActivity$onKeyBackPressedListener
+sleep/simdori/com/Math/DirectFormI.java
+ sleep.simdori.com.Math.DirectFormI
 sleep/simdori/com/util/JsonConnect.java
  sleep.simdori.com.util.JsonConnect
 sleep/simdori/com/asynctask/Set_IotAsyncTask.java
  sleep.simdori.com.asynctask.Set_IotAsyncTask
 sleep/simdori/com/asynctask/Set_SecessionAsyncTask.java
  sleep.simdori.com.asynctask.Set_SecessionAsyncTask
-sleep/simdori/com/activity/LoadingActivity.java
- sleep.simdori.com.activity.LoadingActivity
- sleep.simdori.com.activity.LoadingActivity$1
+sleep/simdori/com/asynctask/Set_ModifyAsyncTask.java
+ sleep.simdori.com.asynctask.Set_ModifyAsyncTask
 sleep/simdori/com/asynctask/Get_SleepDays.java
  sleep.simdori.com.asynctask.Get_SleepDays
 sleep/simdori/com/Math/Cascade.java
@@ -187,6 +182,8 @@ sleep/simdori/com/mqtt/MQTTservice.java
  sleep.simdori.com.mqtt.MQTTservice$ClientHandler
  sleep.simdori.com.mqtt.MQTTservice$MQTTConnection
  sleep.simdori.com.mqtt.MQTTservice$MQTTConnection$MsgHandler
+sleep/simdori/com/util/SNSLogin.java
+ sleep.simdori.com.util.SNSLogin
 sleep/simdori/com/AppConst.java
  sleep.simdori.com.AppConst
 sleep/simdori/com/Math/Bessel.java
@@ -194,8 +191,8 @@ sleep/simdori/com/Math/Bessel.java
  sleep.simdori.com.Math.Bessel$AnalogLowPass
 sleep/simdori/com/Math/DirectFormII.java
  sleep.simdori.com.Math.DirectFormII
-sleep/simdori/com/fragment/BPMDetailFragment.java
- sleep.simdori.com.fragment.BPMDetailFragment
+sleep/simdori/com/dialog/CustomDialog_Search.java
+ sleep.simdori.com.dialog.CustomDialog_Search
 sleep/simdori/com/Math/LowPassTransform.java
  sleep.simdori.com.Math.LowPassTransform
 sleep/simdori/com/Math/DirectFormAbstract.java
@@ -205,6 +202,8 @@ sleep/simdori/com/activity/SplashActivity.java
  sleep.simdori.com.activity.SplashActivity$1
  sleep.simdori.com.activity.SplashActivity$2
  sleep.simdori.com.activity.SplashActivity$LOGIN_STATUS
+sleep/simdori/com/Math/Biquad.java
+ sleep.simdori.com.Math.Biquad
 sleep/simdori/com/asynctask/Set_IotDeleteAsyncTask.java
  sleep.simdori.com.asynctask.Set_IotDeleteAsyncTask
 sleep/simdori/com/Math/BiquadPoleState.java
@@ -229,26 +228,26 @@ sleep/simdori/com/Math/ConcurrencyUtils.java
  sleep.simdori.com.Math.ConcurrencyUtils$1
  sleep.simdori.com.Math.ConcurrencyUtils$CustomExceptionHandler
  sleep.simdori.com.Math.ConcurrencyUtils$CustomThreadFactory
-sleep/simdori/com/asynctask/Set_ModifyAsyncTask.java
- sleep.simdori.com.asynctask.Set_ModifyAsyncTask
-sleep/simdori/com/item/GetGroupList.java
- sleep.simdori.com.item.GetGroupList
- sleep.simdori.com.item.GetGroupList$1
-sleep/simdori/com/util/PopupUtils.java
- sleep.simdori.com.util.PopupUtils
- sleep.simdori.com.util.PopupUtils$1
- sleep.simdori.com.util.PopupUtils$2
- sleep.simdori.com.util.PopupUtils$3
- sleep.simdori.com.util.PopupUtils$4
- sleep.simdori.com.util.PopupUtils$5
- sleep.simdori.com.util.PopupUtils$6
- sleep.simdori.com.util.PopupUtils$7
- sleep.simdori.com.util.PopupUtils$WishWebViewClient
-sleep/simdori/com/util/AES256Cipher.java
- sleep.simdori.com.util.AES256Cipher
-sleep/simdori/com/activity/SleepTrackingActivity.java
- sleep.simdori.com.activity.SleepTrackingActivity
- sleep.simdori.com.activity.SleepTrackingActivity$1
+sleep/simdori/com/fragment/SettingFragment.java
+ sleep.simdori.com.fragment.SettingFragment
+ sleep.simdori.com.fragment.SettingFragment$1
+sleep/simdori/com/asynctask/Get_SleepDailyAsynctask.java
+ sleep.simdori.com.asynctask.Get_SleepDailyAsynctask
+sleep/simdori/com/fragment/mmWaveSleepMeasureFragment.java
+ sleep.simdori.com.fragment.mmWaveSleepMeasureFragment
+ sleep.simdori.com.fragment.mmWaveSleepMeasureFragment$1
+ sleep.simdori.com.fragment.mmWaveSleepMeasureFragment$ServiceHandler
+sleep/simdori/com/fragment/MonitoringStatisticsFragment.java
+ sleep.simdori.com.fragment.MonitoringStatisticsFragment
+sleep/simdori/com/activity/LoadingActivity.java
+ sleep.simdori.com.activity.LoadingActivity
+ sleep.simdori.com.activity.LoadingActivity$1
+sleep/simdori/com/fragment/ResultFragment.java
+ sleep.simdori.com.fragment.ResultFragment
+ sleep.simdori.com.fragment.ResultFragment$1
+sleep/simdori/com/fragment/BPMResultFragment.java
+ sleep.simdori.com.fragment.BPMResultFragment
+ sleep.simdori.com.fragment.BPMResultFragment$1
 sleep/simdori/com/activity/LoginActivity.java
  sleep.simdori.com.activity.LoginActivity
  sleep.simdori.com.activity.LoginActivity$1
@@ -267,24 +266,37 @@ sleep/simdori/com/activity/LoginActivity.java
  sleep.simdori.com.activity.LoginActivity$7
  sleep.simdori.com.activity.LoginActivity$8
  sleep.simdori.com.activity.LoginActivity$9
-sleep/simdori/com/asynctask/Set_IDAsyncTask.java
- sleep.simdori.com.asynctask.Set_IDAsyncTask
-sleep/simdori/com/dialog/CustomDialog_Search.java
- sleep.simdori.com.dialog.CustomDialog_Search
+sleep/simdori/com/fragment/BPMDetailFragment.java
+ sleep.simdori.com.fragment.BPMDetailFragment
+sleep/simdori/com/activity/IotManageActivity.java
+ sleep.simdori.com.activity.IotManageActivity
+ sleep.simdori.com.activity.IotManageActivity$1
+ sleep.simdori.com.activity.IotManageActivity$2
+ sleep.simdori.com.activity.IotManageActivity$3
 sleep/simdori/com/fragment/RecordFragment.java
  sleep.simdori.com.fragment.RecordFragment
-sleep/simdori/com/item/GetDeviceList.java
- sleep.simdori.com.item.GetDeviceList
- sleep.simdori.com.item.GetDeviceList$1
-sleep/simdori/com/fragment/ResultFragment.java
- sleep.simdori.com.fragment.ResultFragment
- sleep.simdori.com.fragment.ResultFragment$1
-sleep/simdori/com/activity/Guide2ndActivity.java
- sleep.simdori.com.activity.Guide2ndActivity
- sleep.simdori.com.activity.Guide2ndActivity$1
-sleep/simdori/com/Math/Biquad.java
- sleep.simdori.com.Math.Biquad
-sleep/simdori/com/Math/DirectFormI.java
- sleep.simdori.com.Math.DirectFormI
-sleep/simdori/com/Math/Vector.java
- sleep.simdori.com.Math.Vector
+sleep/simdori/com/AppUI.java
+ sleep.simdori.com.AppUI
+sleep/simdori/com/activity/HomeActivity.java
+ sleep.simdori.com.activity.HomeActivity
+ sleep.simdori.com.activity.HomeActivity$1
+ sleep.simdori.com.activity.HomeActivity$onKeyBackPressedListener
+sleep/simdori/com/fragment/MeasureFragment.java
+ sleep.simdori.com.fragment.MeasureFragment
+ sleep.simdori.com.fragment.MeasureFragment$1
+ sleep.simdori.com.fragment.MeasureFragment$2
+ sleep.simdori.com.fragment.MeasureFragment$3
+ sleep.simdori.com.fragment.MeasureFragment$4
+ sleep.simdori.com.fragment.MeasureFragment$ServiceHandler
+sleep/simdori/com/fragment/HomeFragment.java
+ sleep.simdori.com.fragment.HomeFragment
+ sleep.simdori.com.fragment.HomeFragment$1
+ sleep.simdori.com.fragment.HomeFragment$2
+ sleep.simdori.com.fragment.HomeFragment$3
+ sleep.simdori.com.fragment.HomeFragment$4
+ sleep.simdori.com.fragment.HomeFragment$5
+ sleep.simdori.com.fragment.HomeFragment$6
+ sleep.simdori.com.fragment.HomeFragment$7
+ sleep.simdori.com.fragment.HomeFragment$8
+ sleep.simdori.com.fragment.HomeFragment$9
+ sleep.simdori.com.fragment.HomeFragment$ServiceHandler

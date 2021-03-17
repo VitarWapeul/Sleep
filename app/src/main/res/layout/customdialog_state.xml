@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="300dp"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <!-- ID/PW 선택 창 -->
+    <LinearLayout
+        android:id="@+id/customDialog_select_state"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp" >
+        <!-- ID 찾기 -->
+        <TextView 
+	        android:id="@+id/customDialog_state_walk_tv"
+	        android:layout_width="150dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	       	android:gravity="center"
+	       	android:background="@color/app_main_color2"
+	        android:text="@string/State_walk"
+	        android:textColor="@color/white"
+	        android:textSize="20dp"
+	        android:textStyle="bold" />
+        
+        <!-- Password 찾기 -->
+        <TextView 
+	        android:id="@+id/customDialog_state_relax_tv"
+	        android:layout_width="150dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:background="@drawable/round_top_right_white"
+	        android:text="@string/State_relax"
+	        android:textColor="@color/hint"
+	        android:textSize="20dp" 
+	        android:textStyle="bold" />
+		<TextView
+			android:id="@+id/customDialog_state_exercise_tv"
+			android:layout_width="150dp"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:background="@drawable/round_top_right_white"
+			android:text="@string/State_exercise"
+			android:textColor="@color/hint"
+			android:textSize="20dp"
+			android:textStyle="bold" />
+		<TextView
+			android:id="@+id/customDialog_state_chill_tv"
+			android:layout_width="150dp"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:background="@drawable/round_top_right_white"
+			android:text="@string/State_chill"
+			android:textColor="@color/hint"
+			android:textSize="20dp"
+			android:textStyle="bold" />
+    </LinearLayout>
+    
+    <View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="2dp"
+	    android:background="@color/app_main_color" />
+    
+    <!-- 입력 창-->
+    <FrameLayout 
+        android:id="@+id/customDialog_state_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="130dp" >
+        <!-- ID 찾기 -->
+		<LinearLayout
+			android:id="@+id/state_Linear"
+			android:layout_width="fill_parent"
+			android:layout_height="130dp"
+			android:layout_gravity="center"
+			android:background="@color/transparent"
+			android:orientation="vertical"
+			android:visibility="visible">
+			<!-- 타이틀 -->
+			<TextView
+				android:id="@+id/customDialog_state_tv"
+				android:layout_width="fill_parent"
+				android:layout_height="40dp"
+				android:layout_gravity="center"
+				android:background="@color/white"
+				android:gravity="center"
+				android:text="현재상태를 선택하세요."
+				android:textColor="@color/hint"
+				android:textSize="20dp" />
+
+
+
+			<!-- 버튼들 -->
+			<LinearLayout
+				android:id="@+id/state_Linear2"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp">
+				<!-- 취소 -->
+				<android.widget.Button
+					android:id="@+id/customDialog_state_btn_Cancel"
+					android:layout_width="fill_parent"
+					android:layout_height="50dp"
+					android:layout_gravity="center"
+					android:layout_weight="1"
+					android:background="@drawable/round_bottom_left_black"
+					android:gravity="center"
+					android:text="@string/Btn_cancel"
+					android:textColor="@color/white"
+					android:textSize="18dp"
+					android:textStyle="bold" />
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="50dp"
+					android:background="@color/white" />
+
+				<!-- 확인  -->
+				<android.widget.Button
+					android:id="@+id/customDialog_state_btn_Confirm"
+					android:layout_width="fill_parent"
+					android:layout_height="50dp"
+					android:layout_gravity="center"
+					android:layout_weight="1"
+					android:background="@drawable/round_bottom_right_black"
+					android:gravity="center"
+					android:text="@string/Btn_confirm"
+					android:textColor="@color/white"
+					android:textSize="18dp"
+					android:textStyle="bold" />
+			</LinearLayout>
+		</LinearLayout>
+    </FrameLayout>
+</LinearLayout>

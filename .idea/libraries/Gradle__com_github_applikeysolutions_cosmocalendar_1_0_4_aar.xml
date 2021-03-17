@@ -2,11 +2,15 @@
   <library name="Gradle: com.github.applikeysolutions:cosmocalendar:1.0.4@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/39aba80e33801fed4bd0f21d62d81fd4/jetified-cosmocalendar-1.0.4/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ca5d01fe0187d00a2d3970d5355dbb7/jetified-cosmocalendar-1.0.4/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/39aba80e33801fed4bd0f21d62d81fd4/jetified-cosmocalendar-1.0.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/39aba80e33801fed4bd0f21d62d81fd4/jetified-cosmocalendar-1.0.4/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/39aba80e33801fed4bd0f21d62d81fd4/jetified-cosmocalendar-1.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ca5d01fe0187d00a2d3970d5355dbb7/jetified-cosmocalendar-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ca5d01fe0187d00a2d3970d5355dbb7/jetified-cosmocalendar-1.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ca5d01fe0187d00a2d3970d5355dbb7/jetified-cosmocalendar-1.0.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.applikeysolutions/cosmocalendar/1.0.4/58a35bd2bcba7c454fd6b97c5cf863e3388a5b75/cosmocalendar-1.0.4-javadoc.jar!/" />

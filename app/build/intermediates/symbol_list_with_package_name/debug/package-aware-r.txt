@@ -1995,6 +1995,15 @@ id customDialog_notifying_msg
 id customDialog_notifying_title
 id customDialog_pw
 id customDialog_select
+id customDialog_select_state
+id customDialog_state_btn_Cancel
+id customDialog_state_btn_Confirm
+id customDialog_state_chill_tv
+id customDialog_state_exercise_tv
+id customDialog_state_frame
+id customDialog_state_relax_tv
+id customDialog_state_tv
+id customDialog_state_walk_tv
 id customDialog_title
 id customDialog_webview_btn
 id customDialog_webview_title
@@ -2123,7 +2132,7 @@ id loginInputPwd
 id loginText
 id loginText1
 id loginText2
-id mainFragmennt
+id mainFragment
 id masked
 id measurebackbutton
 id measureusername
@@ -2387,6 +2396,8 @@ id src_over
 id standard
 id start
 id startButton
+id state_Linear
+id state_Linear2
 id status_bar_latest_event_content
 id stress
 id stresstxt
@@ -2588,6 +2599,7 @@ layout custom_dialog
 layout customdialog_notify
 layout customdialog_notifying
 layout customdialog_search
+layout customdialog_state
 layout customdialog_webview
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2755,6 +2767,10 @@ string Optional_Field
 string PW_hint
 string Phone_hint
 string Required_Field
+string State_chill
+string State_exercise
+string State_relax
+string State_walk
 string Title_Device
 string Title_Group
 string Title_Setting
@@ -2937,6 +2953,7 @@ string ifname_AP
 string ifname_Extender
 string ifname_Repeater
 string item_view_role_description
+string kakao_app_key
 string login_btn_auto_login
 string login_btn_forgot
 string login_btn_id_serch

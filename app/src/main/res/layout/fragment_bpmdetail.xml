@@ -170,7 +170,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
-                    <TextView
+                        <TextView
                         android:id="@+id/textView25"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
