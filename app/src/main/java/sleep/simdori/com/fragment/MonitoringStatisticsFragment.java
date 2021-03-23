@@ -50,6 +50,7 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
     Button clearButton;
     Button showButton;
     TextView userName;
+    TextView monitoringStatisticsPeriod;
 
     // Chart
     private LineChart qualityLineChart;
@@ -60,6 +61,7 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
     String userNameValue;
     CalendarView calendarView;
     String device_mac;
+    String selected_period;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,7 +87,7 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
         showButton.setOnClickListener(this);
         clearButton = (Button) v.findViewById(R.id.clear_selections);
         clearButton.setOnClickListener(this);
-
+        monitoringStatisticsPeriod = v.findViewById(R.id.monitoringStatisticsPeriod);
         qualityLineChart = v.findViewById(R.id.sleepQualityChart);
         startTimeLineChart = v.findViewById(R.id.sleepStartTimeChart);
         totalSleepTimeBarChart = v.findViewById(R.id.totalSleepTimeChart);
@@ -111,13 +113,13 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
 
             case R.id.show_selections:
                 List<Calendar> days = calendarView.getSelectedDates();
-
+                System.out.println( "calendarView.getSelectedDates()" + days);
                 String result="";
                 //i = 0 부터 i = days.size() - 1 까지
                 Calendar calendar = days.get(0);
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
                 String month = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-                if(month.length() == 1){
+                if(month.length() == 1){//1-9월 이면 앞에 0을 붙임 ex. 01월
                     month = "0" + month;
                 }
                 int year = calendar.get(Calendar.YEAR);
@@ -133,7 +135,7 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
                 String endDate = year + "-"+ (month)  + "-" + day;
 
                 Toast.makeText(getActivity(), startDate + " ~ " + endDate, Toast.LENGTH_LONG).show();
-
+                monitoringStatisticsPeriod.setText(startDate+" ~ " +endDate+" 통계");
                 getSleepDays(userNameValue, device_mac, startDate, endDate);
 
                 drawGraph();
@@ -172,7 +174,7 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
     public void drawGraph(){
         String sleepDays = pref.getValue(SharedPrefUtil.SLEEPDAYS, "");
         sleepDays = sleepDays.replace("\"", "");
-
+        System.out.println("sleepDays : "+sleepDays);
         String[] daysData = sleepDays.split(",");
         daysData[0] = daysData[0].replace("[", "");
         daysData[daysData.length - 1] = daysData[daysData.length - 1].replace("]", "");
@@ -300,10 +302,12 @@ public class MonitoringStatisticsFragment extends Fragment implements View.OnCli
         if(!(daysData.length < 4)){
             for(int i = 0; i < daysData.length; i = i + 4){
                 // 총 수면 시간 순서 맞게 수정 및 보여주는 데이터 형식 변환 필요
-                float qualityData = Float.parseFloat(daysData[i + 1].substring(5,10).replace("-", "."));
+                float qualityData = Float.parseFloat(daysData[i + 3].substring(5,10).replace("-", "."));
                 totalSleepTimeDataValue.add(new BarEntry(qualityData, Float.parseFloat(daysData[i])));
 
             }
+        }else{
+            Toast.makeText(getContext(),"측정된 수면데이터가 없습니다.",Toast.LENGTH_LONG);
         }
         return totalSleepTimeDataValue;
     }

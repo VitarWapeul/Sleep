@@ -61,18 +61,18 @@
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+
 
                 <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
-                <data
-                    android:host="oauth"
-                    android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c" />
+                <!-- <data android:host="oauth" -->
+                <!-- android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c"/> -->
             </intent-filter>
         </activity>
+        <!-- <activity android:name=".activity.LoadingActivity"></activity> -->
         <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
         <activity android:name="sleep.simdori.com.activity.Guide2ndActivity" />
-        <activity android:name="sleep.simdori.com.activity.HomeActivity" >
-        </activity>
+        <activity android:name="sleep.simdori.com.activity.HomeActivity" />
         <activity android:name="sleep.simdori.com.activity.LoginActivity" />
         <!-- <activity android:name=".activity.SignupActivity"></activity> -->
         <activity android:name="sleep.simdori.com.activity.ModifyActivity" />

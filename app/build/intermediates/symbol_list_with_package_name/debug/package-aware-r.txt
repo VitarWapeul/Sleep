@@ -2053,7 +2053,6 @@ id ghost_view
 id ghost_view_holder
 id gone
 id goodText
-id googleLoginButton
 id gotoMonitoringStatisticsButton
 id gotoSignupButton
 id graph
@@ -2080,9 +2079,6 @@ id image
 id imageView
 id imageView10
 id imageView14
-id imageView2
-id imageView3
-id imageView4
 id imageView5
 id imageView7
 id imageView8
@@ -2103,7 +2099,6 @@ id iv_cancel
 id iv_done
 id iv_next_month
 id iv_previous_month
-id kakaoLoginButton
 id labeled
 id largeLabel
 id left
@@ -2202,7 +2197,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiple
 id multiply
-id naverLoginButton
 id navigation_header_container
 id never
 id noScroll
@@ -2429,18 +2423,15 @@ id textName
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id textView10
 id textView11
 id textView12
 id textView13
-id textView2
 id textView21
 id textView22
 id textView23
 id textView24
 id textView25
-id textView3
 id textView4
 id textView5
 id textView6

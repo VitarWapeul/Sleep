@@ -119,9 +119,9 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
         getSleepDaily(userName, device_mac, date);
         sleepDataStr = pref.getValue(SharedPrefUtil.SLEEP, "");
-        System.out.println("sleepDataStr : "+sleepDataStr);
+        System.out.println("sleepDataStr : "+ sleepDataStr);
         sleepData = sleepDataStr.split(",");
-
+        System.out.println("sleepData : "+ sleepData[0] );
 
         if(sleepData.length >= 11){
             //DB에서 가져온 데이터 보기 쉽게 처리
@@ -176,66 +176,67 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         awlSleepTextView.setText("■" + awlSleepTime);
         elementTextView.setText(sleepElement);
         diagnosisTextView.setText(sleepDiagnosis);
+        if(sleepDataStr.length()==4) {//가져온 수면데이터가 없으면
+            Toast.makeText(getContext(),"측정된 수면데이터가 없습니다.",Toast.LENGTH_LONG);
+        }else{
+            //수면 질 차트
+            pieChart = v.findViewById(R.id.pieChart);
 
-        //수면 질 차트
-        pieChart = v.findViewById(R.id.pieChart);
-
-        PieDataSet pieDataSet = new PieDataSet(sleepTimeData(),"");
-        pieDataSet.setColors(colorArray);
-        pieDataSet.setValueTextColor(Color.parseColor("#00ff0000"));
-        PieData pieData = new PieData(pieDataSet);
+            PieDataSet pieDataSet = new PieDataSet(sleepTimeData(), "");
+            pieDataSet.setColors(colorArray);
+            pieDataSet.setValueTextColor(Color.parseColor("#00ff0000"));
+            PieData pieData = new PieData(pieDataSet);
 
 
-        if(sleepQuality.equals("3")){
-            pieChart.setCenterText("PERFECT\nSleep");
-        }else if(sleepQuality.equals("2")){
-            pieChart.setCenterText("GOOD\nSleep");
-        }else if(sleepQuality.equals("1")){
-            pieChart.setCenterText("BAD\nSleep");
+            if (sleepQuality.equals("3")) {
+                pieChart.setCenterText("PERFECT\nSleep");
+            } else if (sleepQuality.equals("2")) {
+                pieChart.setCenterText("GOOD\nSleep");
+            } else if (sleepQuality.equals("1")) {
+                pieChart.setCenterText("BAD\nSleep");
+            }
+
+            pieChart.setCenterTextSize(18);
+            pieChart.setCenterTextColor(Color.WHITE);
+            pieChart.setHoleRadius(75);
+            pieChart.setData(pieData);
+            pieChart.setHoleColor(Color.parseColor("#00ff0000"));
+            pieChart.setDrawEntryLabels(false);
+
+            //수면 분석 차트
+            lineChart = v.findViewById(R.id.lineChart);
+
+            lineChart.setPinchZoom(false);
+            lineChart.setBackgroundColor(Color.parseColor("#00ff0000"));
+            lineChart.setDrawGridBackground(false);
+
+            LineDataSet lineDataSet = new LineDataSet(sleepAnalysisData(stage), "");
+            lineDataSet.setDrawIcons(false);
+
+            ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
+            lineDataSets.add(lineDataSet);
+            LineData lineData = new LineData(lineDataSets);
+
+            lineChart.setData(lineData);
+
+            lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+            lineDataSet.setDrawFilled(false);
+            lineDataSet.setDrawCircles(false);
+            lineDataSet.setHighLightColor(Color.WHITE);
+            lineDataSet.setColor(Color.WHITE);
+            lineDataSet.setFillColor(Color.WHITE);
+            lineDataSet.setFillAlpha(100);
+            lineDataSet.setDrawHorizontalHighlightIndicator(false);
+
+
+            lineData.setDrawValues(false);
+
+            lineChart.setViewPortOffsets(0, 0, 0, 0);
+
+            lineChart.getDescription().setEnabled(false);
+
+            lineChart.invalidate();
         }
-
-        pieChart.setCenterTextSize(18);
-        pieChart.setCenterTextColor(Color.WHITE);
-        pieChart.setHoleRadius(75);
-        pieChart.setData(pieData);
-        pieChart.setHoleColor(Color.parseColor("#00ff0000"));
-        pieChart.setDrawEntryLabels(false);
-
-        //수면 분석 차트
-        lineChart = v.findViewById(R.id.lineChart);
-
-        lineChart.setPinchZoom(false);
-        lineChart.setBackgroundColor(Color.parseColor("#00ff0000"));
-        lineChart.setDrawGridBackground(false);
-
-        LineDataSet lineDataSet = new LineDataSet(sleepAnalysisData(stage), "");
-        lineDataSet.setDrawIcons(false);
-
-        ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
-        lineDataSets.add(lineDataSet);
-        LineData lineData = new LineData(lineDataSets);
-
-        lineChart.setData(lineData);
-
-        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
-        lineDataSet.setDrawFilled(false);
-        lineDataSet.setDrawCircles(false);
-        lineDataSet.setHighLightColor(Color.WHITE);
-        lineDataSet.setColor(Color.WHITE);
-        lineDataSet.setFillColor(Color.WHITE);
-        lineDataSet.setFillAlpha(100);
-        lineDataSet.setDrawHorizontalHighlightIndicator(false);
-
-
-
-        lineData.setDrawValues(false);
-
-        lineChart.setViewPortOffsets(0, 0, 0, 0);
-
-        lineChart.getDescription().setEnabled(false);
-
-        lineChart.invalidate();
-
         return v;
     }
 
@@ -256,9 +257,9 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         int deep;
         int total;
 
-        if(deepSleepTime.length() == 6){
+        if(deepSleepTime.length() == 6){//수면시간이 10시간 미만이면
             deep = Integer.parseInt(deepSleepTime.substring(0,1)) * 60 + Integer.parseInt(deepSleepTime.substring(3,5));
-        }else{
+        }else{//수면시간이 10시간 이상이면
             deep = Integer.parseInt(deepSleepTime.substring(0,2)) * 60 + Integer.parseInt(deepSleepTime.substring(4,6));
         }
         if(totalSleepTime.length() == 6){

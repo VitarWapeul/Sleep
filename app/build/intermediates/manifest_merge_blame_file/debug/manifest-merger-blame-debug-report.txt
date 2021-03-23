@@ -78,7 +78,7 @@
 40-->[com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\a58c6f788413e866ac258904be4ca678\jetified-zxing-android-embedded-3.6.0\AndroidManifest.xml:44:9-33
 41
 42    <application
-42-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:15:5-63:19
+42-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:15:5-64:19
 43        android:name="sleep.simdori.com.util.SNSLogin"
 43-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:24:9-38
 44        android:allowBackup="true"
@@ -102,10 +102,10 @@
 54        android:theme="@style/Theme.Sleep" >
 54-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:20:9-43
 55        <activity android:name="sleep.simdori.com.activity.LoadingActivity" >
-55-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:26:9-38:20
+55-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:26:9-39:20
 55-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:26:19-59
 56            <intent-filter>
-56-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:27:13-37:29
+56-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:27:13-38:29
 57                <action android:name="android.intent.action.MAIN" />
 57-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:28:17-69
 57-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:28:25-66
@@ -115,75 +115,70 @@
 59-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:29:27-74
 60
 61                <action android:name="android.intent.action.VIEW" />
-61-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:17-69
-61-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:25-66
+61-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:17-69
+61-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:25-66
 62
 63                <category android:name="android.intent.category.DEFAULT" />
-63-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:17-76
-63-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:27-73
-64                <category android:name="android.intent.category.BROWSABLE" />
-64-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:17-78
-64-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:27-75
+63-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:17-76
+63-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:27-73
+64                <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
 65
-66                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
-67                <data
-67-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:17-36:77
-68                    android:host="oauth"
-68-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:23-43
-69                    android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c" />
-69-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:36:21-75
+66
+67                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+68                <!-- <data android:host="oauth" -->
+69                <!-- android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c"/> -->
 70            </intent-filter>
 71        </activity>
-72        <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
-72-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:39:9-72
-72-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:39:19-60
-73        <activity android:name="sleep.simdori.com.activity.Guide2ndActivity" />
-73-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:40:9-72
-73-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:40:19-60
-74        <activity android:name="sleep.simdori.com.activity.HomeActivity" >
-74-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:9-42:20
-74-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:19-56
-75        </activity>
+72        <!-- <activity android:name=".activity.LoadingActivity"></activity> -->
+73        <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
+73-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:9-72
+73-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:41:19-60
+74        <activity android:name="sleep.simdori.com.activity.Guide2ndActivity" />
+74-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:42:9-72
+74-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:42:19-60
+75        <activity android:name="sleep.simdori.com.activity.HomeActivity" />
+75-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:43:9-68
+75-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:43:19-56
 76        <activity android:name="sleep.simdori.com.activity.LoginActivity" />
-76-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:43:9-69
-76-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:43:19-57
+76-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:44:9-69
+76-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:44:19-57
 77        <!-- <activity android:name=".activity.SignupActivity"></activity> -->
 78        <activity android:name="sleep.simdori.com.activity.ModifyActivity" />
-78-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:45:9-70
-78-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:45:19-58
+78-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:9-70
+78-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:19-58
 79        <activity
-79-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:9-47:81
+79-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:47:9-48:81
 80            android:name="sleep.simdori.com.activity.SleepTrackingActivity"
-80-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:46:19-65
+80-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:47:19-65
 81            android:theme="@style/AppTheme.SlidrActivityTheme" />
-81-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:47:19-69
+81-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:48:19-69
 82        <activity android:name="sleep.simdori.com.activity.RegisterActivity" />
-82-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:48:9-72
-82-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:48:19-60
+82-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:9-72
+82-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:19-60
 83        <activity android:name="sleep.simdori.com.activity.IotManageActivity" />
-83-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:9-73
-83-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:49:19-61
+83-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:50:9-73
+83-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:50:19-61
 84
 85        <!-- Mqtt Service -->
 86        <service android:name="org.eclipse.paho.android.service.MqttService" >
-86-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:52:9-53:19
-86-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:52:18-77
+86-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:53:9-54:19
+86-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:53:18-77
 87        </service>
 88
 89        <receiver android:name="sleep.simdori.com.mqtt.BootReceiver" >
-89-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:55:9-59:20
-89-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:55:19-69
+89-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:56:9-60:20
+89-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:56:19-69
 90            <intent-filter>
-90-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:56:13-58:29
+90-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:57:13-59:29
 91                <action android:name="android.intent.action.BOOT_COMPLETED" />
-91-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:57:17-78
-91-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:57:25-76
+91-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:58:17-78
+91-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:58:25-76
 92            </intent-filter>
 93        </receiver>
 94
 95        <service android:name="sleep.simdori.com.mqtt.MQTTservice" >
-95-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:61:9-62:19
-95-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:61:18-67
+95-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:62:9-63:19
+95-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:62:18-67
 96        </service>
 97
 98        <activity
@@ -213,23 +208,24 @@
 110            <intent-filter>
 110-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:29:13-39:29
 111                <action android:name="android.intent.action.VIEW" />
-111-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:17-69
-111-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:30:25-66
+111-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:17-69
+111-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:25-66
 112
 113                <category android:name="android.intent.category.DEFAULT" />
-113-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:17-76
-113-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:31:27-73
+113-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:17-76
+113-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:27-73
 114                <category android:name="android.intent.category.BROWSABLE" />
-114-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:17-78
-114-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:32:27-75
+114-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:33:17-78
+114-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:33:27-75
 115                <!-- Intent URL 에서 로그인 액티비티를 실행하기 위해 설정 -->
 116                <data
-116-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:17-36:77
+116-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:35:17-38:59
 117                    android:host="authorize"
-117-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:35:23-43
+117-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:36:21-45
 118                    android:path="/"
+118-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:37:21-37
 119                    android:scheme="naver3rdpartylogin" />
-119-->C:\Users\wapeu\AndroidStudioProjects\simdori.com-coolcool\app\src\main\AndroidManifest.xml:36:21-75
+119-->[com.naver.nid:naveridlogin-android-sdk:4.2.6] C:\Users\wapeu\.gradle\caches\transforms-2\files-2.1\5140489f235b73b7f15090e0c0d4248d\jetified-naveridlogin-android-sdk-4.2.6\AndroidManifest.xml:38:21-56
 120            </intent-filter>
 121        </activity>
 122        <activity

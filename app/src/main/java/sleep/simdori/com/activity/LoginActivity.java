@@ -217,9 +217,9 @@ public class LoginActivity extends AppCompatActivity {
         pwdEditText = (EditText) findViewById(R.id.loginInputPwd);
 
         loginButton = (Button) findViewById(R.id.loginButton);
-        naverLoginButton = (LinearLayout) findViewById(R.id.naverLoginButton) ;
-        googleLoginButton = (LinearLayout) findViewById(R.id.googleLoginButton);
-        kakaoLoginButton = (LinearLayout) findViewById(R.id.kakaoLoginButton);
+//        naverLoginButton = (LinearLayout) findViewById(R.id.naverLoginButton) ;
+//        googleLoginButton = (LinearLayout) findViewById(R.id.googleLoginButton);
+//        kakaoLoginButton = (LinearLayout) findViewById(R.id.kakaoLoginButton);
         signupButton = (Button) findViewById(R.id.gotoSignupButton);
         btnSearch = (Button) findViewById(R.id.findPwdButton);
 
@@ -315,62 +315,62 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-        //네이버로그인
-        naverLoginButton.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mContext = getApplicationContext();
-
-                mOAuthLoginModule = OAuthLogin.getInstance();
-                mOAuthLoginModule.init(mContext ,getString(R.string.naver_client_id) ,getString(R.string.naver_client_secret) ,getString(R.string.naver_client_name));
-
-                @SuppressLint("HandlerLeak")
-                OAuthLoginHandler mOAuthLoginHandler = new OAuthLoginHandler() {
-                    @Override
-                    public void run(boolean success) {
-                        if (success) {
-                            String accessToken = mOAuthLoginModule.getAccessToken(mContext);
-                            String refreshToken = mOAuthLoginModule.getRefreshToken(mContext);
-                            long expiresAt = mOAuthLoginModule.getExpiresAt(mContext);
-                            String tokenType = mOAuthLoginModule.getTokenType(mContext);
-
-                            Log.i("LoginData","accessToken : "+ accessToken);
-                            Log.i("LoginData","refreshToken : "+ refreshToken);
-                            Log.i("LoginData","expiresAt : "+ expiresAt);
-                            Log.i("LoginData","tokenType : "+ tokenType);
-
-                            Intent intent = new Intent(mContext, HomeActivity.class);
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            String errorCode = mOAuthLoginModule
-                                    .getLastErrorCode(mContext).getCode();
-                            String errorDesc = mOAuthLoginModule.getLastErrorDesc(mContext);
-                            Toast.makeText(mContext, "errorCode:" + errorCode
-                                    + ", errorDesc:" + errorDesc, Toast.LENGTH_SHORT).show();
-                        }
-                    };
-                };
-
-                mOAuthLoginModule.startOauthLoginActivity(LoginActivity.this, mOAuthLoginHandler);
-
-
-            }
-        });
-        //구글로그인
-        // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        // Check for existing Google Sign In account, if the user is already signed in
-        // the GoogleSignInAccount will be non-null.
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-
-        googleLoginButton.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                signIn();
-
-            }
-        });
+//        //네이버로그인
+//        naverLoginButton.setOnClickListener(new Button.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mContext = getApplicationContext();
+//
+//                mOAuthLoginModule = OAuthLogin.getInstance();
+//                mOAuthLoginModule.init(mContext ,getString(R.string.naver_client_id) ,getString(R.string.naver_client_secret) ,getString(R.string.naver_client_name));
+//
+//                @SuppressLint("HandlerLeak")
+//                OAuthLoginHandler mOAuthLoginHandler = new OAuthLoginHandler() {
+//                    @Override
+//                    public void run(boolean success) {
+//                        if (success) {
+//                            String accessToken = mOAuthLoginModule.getAccessToken(mContext);
+//                            String refreshToken = mOAuthLoginModule.getRefreshToken(mContext);
+//                            long expiresAt = mOAuthLoginModule.getExpiresAt(mContext);
+//                            String tokenType = mOAuthLoginModule.getTokenType(mContext);
+//
+//                            Log.i("LoginData","accessToken : "+ accessToken);
+//                            Log.i("LoginData","refreshToken : "+ refreshToken);
+//                            Log.i("LoginData","expiresAt : "+ expiresAt);
+//                            Log.i("LoginData","tokenType : "+ tokenType);
+//
+//                            Intent intent = new Intent(mContext, HomeActivity.class);
+//                            startActivity(intent);
+//                            finish();
+//                        } else {
+//                            String errorCode = mOAuthLoginModule
+//                                    .getLastErrorCode(mContext).getCode();
+//                            String errorDesc = mOAuthLoginModule.getLastErrorDesc(mContext);
+//                            Toast.makeText(mContext, "errorCode:" + errorCode
+//                                    + ", errorDesc:" + errorDesc, Toast.LENGTH_SHORT).show();
+//                        }
+//                    };
+//                };
+//
+//                mOAuthLoginModule.startOauthLoginActivity(LoginActivity.this, mOAuthLoginHandler);
+//
+//
+//            }
+//        });
+//        //구글로그인
+//        // Build a GoogleSignInClient with the options specified by gso.
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+//        // Check for existing Google Sign In account, if the user is already signed in
+//        // the GoogleSignInAccount will be non-null.
+//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+//
+//        googleLoginButton.setOnClickListener(new Button.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                signIn();
+//
+//            }
+//        });
         //카카오로그인
         // 초기화
 //        kakaoLoginButton.setOnClickListener(new Button.OnClickListener(){

@@ -25,6 +25,10 @@ public class LoadingActivity extends AppCompatActivity {
     String[] permission_list = {
             Manifest.permission.CAMERA
     };
+//    String[] permission_list = {
+//            Manifest.permission.CAMERA,
+//            Manifest.permission.READ_EXTERNAL_STORAGE
+//    };
 
     // Values
     private String unique_ID 	= null;
@@ -152,27 +156,33 @@ public class LoadingActivity extends AppCompatActivity {
     }
 
     private void checkPermission(){
-
+        System.out.println("LoadingActivity_checkPermission() 진입");
+        int count=0;
         for(String permission : permission_list){
             //권한 허용 여부를 확인한다.
             int chk = checkCallingOrSelfPermission(permission);
-
+            System.out.println("LoadingActivity_chk : "+chk);
+            System.out.println("LoadingActivity_PackageManager.PERMISSION_DENIED : "+PackageManager.PERMISSION_DENIED);
             if(chk == PackageManager.PERMISSION_DENIED){
+                System.out.println("chk == PackageManager.PERMISSION_DENIED진입");
                 Intent intent = new Intent(getApplicationContext(), Guide1stActivity.class);
                 startActivity(intent);
                 finish();
             }else{
-                if(login_status == 1){
+                if (login_status == 1) {//자동로그인상태라면
                     Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(intent);
                     finish();
-                }else{
+                } else {
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }
             }
         }
+//        if(count==permission_list.length) {//필요한 모든 권한이 승인되었다면
+//
+//        }
     }
 
     public void checkVerify() {

@@ -8,12 +8,12 @@
         "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\move_left_out_activity.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_guide_2nd.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_guide_2nd.xml"
-    },
-    {
         "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_checkbox3.png.flat",
         "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\login_checkbox3.png"
+    },
+    {
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_guide_2nd.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_guide_2nd.xml"
     },
     {
         "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\naver_login_icon.PNG"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pie_chart.png.flat",
         "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\pie_chart.png"
+    },
+    {
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_setting.png.flat",
