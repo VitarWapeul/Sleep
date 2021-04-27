@@ -17,6 +17,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 걸음수 측정을 위한 포그라운드 권한 -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
     <uses-feature
@@ -40,7 +42,7 @@
         android:required="false" />
 
     <application
-        android:name="sleep.simdori.com.util.SNSLogin"
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -52,7 +54,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Sleep" >
+        <receiver
+            android:name="sleep.simdori.com.util.MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- 로그인 스킵하기 위함 210422 -->
         <activity android:name="sleep.simdori.com.activity.LoadingActivity" >
+
+            <!-- <activity android:name=".activity.HomeActivity"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -68,32 +77,28 @@
                 <!-- <data android:host="oauth" -->
                 <!-- android:scheme="kakao9a28f2e77dbb8f62e5f55f9efc9ecf6c"/> -->
             </intent-filter>
-        </activity>
-        <!-- <activity android:name=".activity.LoadingActivity"></activity> -->
+        </activity> <!-- <activity android:name=".activity.LoadingActivity"></activity> -->
         <activity android:name="sleep.simdori.com.activity.Guide1stActivity" />
         <activity android:name="sleep.simdori.com.activity.Guide2ndActivity" />
         <activity android:name="sleep.simdori.com.activity.HomeActivity" />
-        <activity android:name="sleep.simdori.com.activity.LoginActivity" />
-        <!-- <activity android:name=".activity.SignupActivity"></activity> -->
+        <activity android:name="sleep.simdori.com.activity.LoginActivity" /> <!-- <activity android:name=".activity.SignupActivity"></activity> -->
         <activity android:name="sleep.simdori.com.activity.ModifyActivity" />
         <activity
             android:name="sleep.simdori.com.activity.SleepTrackingActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
         <activity android:name="sleep.simdori.com.activity.RegisterActivity" />
-        <activity android:name="sleep.simdori.com.activity.IotManageActivity" />
-
-        <!-- Mqtt Service -->
-        <service android:name="org.eclipse.paho.android.service.MqttService" >
-        </service>
+        <activity android:name="sleep.simdori.com.activity.IotManageActivity" /> <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
 
         <receiver android:name="sleep.simdori.com.mqtt.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
             </intent-filter>
         </receiver>
 
-        <service android:name="sleep.simdori.com.mqtt.MQTTservice" >
-        </service>
+        <service android:name="sleep.simdori.com.util.WalkCountService" />
+        <service android:name="sleep.simdori.com.mqtt.MQTTservice" />
 
         <activity
             android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"

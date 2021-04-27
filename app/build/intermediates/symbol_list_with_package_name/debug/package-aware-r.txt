@@ -1963,6 +1963,7 @@ id chip1
 id chip2
 id chip3
 id chip_group
+id chk_walkButton
 id chronometer
 id clear_selections
 id clear_text
@@ -1975,6 +1976,7 @@ id content
 id contentPanel
 id coolcoolLabel
 id coordinator
+id countWalk
 id currentTime
 id custom
 id customDialog_ID_btn_Cancel
@@ -2053,6 +2055,7 @@ id ghost_view
 id ghost_view_holder
 id gone
 id goodText
+id googleLoginButton
 id gotoMonitoringStatisticsButton
 id gotoSignupButton
 id graph
@@ -2079,6 +2082,8 @@ id image
 id imageView
 id imageView10
 id imageView14
+id imageView2
+id imageView3
 id imageView5
 id imageView7
 id imageView8
@@ -2197,6 +2202,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiple
 id multiply
+id naverLoginButton
 id navigation_header_container
 id never
 id noScroll
@@ -2423,10 +2429,12 @@ id textName
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textView10
 id textView11
 id textView12
 id textView13
+id textView2
 id textView21
 id textView22
 id textView23

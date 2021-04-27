@@ -61,6 +61,7 @@ import sleep.simdori.com.activity.HomeActivity;
 import sleep.simdori.com.asynctask.Set_BPMAsyncTask;
 import sleep.simdori.com.mqtt.MQTTservice;
 import sleep.simdori.com.util.DatabaseHandler;
+import sleep.simdori.com.util.HRVcalculator;
 import sleep.simdori.com.util.ImageProcessing;
 import sleep.simdori.com.util.SharedPrefUtil;
 import sleep.simdori.com.util.ToastUtils;
@@ -465,6 +466,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 ProgHeart.setProgress(ProgP);
                 String strProgress = ProgP + " %";
                 tvProgressCircle.setText(strProgress);
+                Toast.makeText(getContext(),"손가락으로 카메라와 렌즈를 완전히 덮어주세요",Toast.LENGTH_LONG).show();
                 processing.set(false);
             }
             long endTime = System.currentTimeMillis();
@@ -492,6 +494,12 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
 
                 Log.d("chcho green", Arrays.toString(Green));
                 List<Double> peaks = PeakDetecion(GreenAvgList, timestamp,15);
+                HRVcalculator hrv = new HRVcalculator(peaks);
+                System.out.println("HRV_NNIAVG : "+hrv.getNNIAVG());
+                System.out.println("HRV_RMSSD : "+hrv.getRMSSD());
+                System.out.println("HRV_SDNN : "+hrv.getSDNN());
+                System.out.println("HRV_SDSD : "+hrv.getSDSD());
+                System.out.println("HRV_Stress : "+hrv.getStress());
 //                analyzeDataForSignals(GreenAvgList, timestamp,5, 3.5, 0.3);
 //                Log.d("chcho red", Arrays.toString(Red));
 //                PeakDetecion(RedAvgList, timestamp,15);

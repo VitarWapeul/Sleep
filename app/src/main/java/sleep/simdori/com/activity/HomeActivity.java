@@ -1,6 +1,7 @@
 package sleep.simdori.com.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -35,7 +36,14 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        startService(new Intent(this, MQTTservice.class));
+//        startService(new Intent(this, MQTTservice.class));
+        //버전을 비교하여, foreground이슈로인해 잠시 주석처리
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            startForegroundService(new Intent(this, MQTTservice.class));
+//        } else {
+//            startService(new Intent(this, MQTTservice.class));
+//        }
+
         bottomNavigationView = findViewById(R.id.bottomNavBar);
 
         fragmentTransaction = fragmentManager.beginTransaction();

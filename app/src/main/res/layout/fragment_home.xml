@@ -60,6 +60,16 @@
         app:layout_constraintTop_toBottomOf="@+id/homeFragmentLinear">
 
         <TextView
+            android:id="@+id/countWalk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:visibility="invisible"
+            android:text="걸음 수 : "
+            android:textColor="#FFFFFF"
+            android:textSize="45sp" />
+        <TextView
             android:id="@+id/currentTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,6 +113,15 @@
             android:background="@drawable/start_btn"
             android:text="센서 백업"
             android:textColor="@color/white" />
+        <android.widget.Button
+            android:id="@+id/chk_walkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/start_btn"
+            android:text="걸음 수 체크시작"
+            android:textColor="@color/white" />
+
 
 
         <LinearLayout

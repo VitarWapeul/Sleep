@@ -2,13 +2,22 @@ package sleep.simdori.com.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.os.Handler;
 import android.os.IBinder;
@@ -25,6 +34,7 @@ import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.TimeZone;
@@ -37,8 +47,12 @@ import sleep.simdori.com.activity.HomeActivity;
 import sleep.simdori.com.activity.LoginActivity;
 import sleep.simdori.com.dialog.CustomDialog_State;
 import sleep.simdori.com.mqtt.MQTTservice;
+import sleep.simdori.com.util.DatabaseHandler;
+import sleep.simdori.com.util.MyReceiver;
 import sleep.simdori.com.util.SharedPrefUtil;
 import sleep.simdori.com.util.ToastUtils;
+import sleep.simdori.com.util.WalkCallback;
+import sleep.simdori.com.util.WalkCountService;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,10 +68,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     // View
     private TextView userNameTextView;
     private TextView currentTime;
+    private TextView countWalk;
     private TextView customDialog_state_walk_tv;
     private TextView customDialog_state_relax_tv;
     private TextView customDialog_state_exercise_tv;
     private TextView customDialog_state_chill_tv;
+    Button cameraBpmMeasureStartButton;
+    Button mmWaveBpmMeasureStartButton;
+    Button sleepMeasureStartButton;
+    Button mmWaveBackupButton;
+    Button chk_walkButton;
 
     // Values
     String device_mac;
@@ -66,8 +86,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     // API
     private CustomDialog_State customDialog_state;
     private SharedPrefUtil pref = null;
+    private SharedPrefUtil pref2 = null;
     private LinkedList<Integer> queue = null;
-
+    private Activity mActivity;
+    private Context mContext;
+    private Package mPackage;
     // MQTT
     private IntentFilter intentFilter 		= null;
     private Messenger service = null;
@@ -77,13 +100,102 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private Bundle data = null;
     private int status = 0, mid_device = 0 ;
 
+    //만보기
+    private DatabaseHandler dbhandler;
+    private SQLiteDatabase sqlDB;
+    private BroadcastReceiver mReciver;
+    boolean WalkBtnToggle = false;
+    int step;
+    boolean isWalkService = false; // 서비스 중인 확인용
+    private WalkCountService walkCountService; // 서비스 클래스 객체를 선언
+    private Intent wlak_service_intent; //서비스 객체를 가지고 있는 인텐트 객체
+    private WalkCallback WalkCallback = new WalkCallback() { //서비스 내부로 Set되어 스텝카운트의 변화와 Unbind의 결과를 전달하는 콜백 객체의 구현체
+        @Override
+        public void onWalkCallback(int step) {
+
+            System.out.println("HomeFragment - onWalkCallback호출");
+            countWalk.setText("오늘 걸음 수 : " + step);
+        }
+
+        @Override
+        public void onUnbindService() {
+            System.out.println("HomeFragment - onUnbindService호출");
+            isWalkService = false;
+
+            Toast.makeText(mActivity, "디스바인딩", Toast.LENGTH_SHORT).show();
+        }
+    };
+    //만보기서비스시작
+    private ServiceConnection WalkserviceConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName arg0, IBinder binder) {
+            System.out.println("===================onServiceConnected=====================");
+            Toast.makeText(mActivity, "예스바인딩", Toast.LENGTH_SHORT).show();
+            WalkCountService.MyBinder mb = (WalkCountService.MyBinder) binder;
+            walkCountService = mb.getService(); //
+            walkCountService.setCallback(WalkCallback);
+
+        }
+        @Override
+        public void onServiceDisconnected(ComponentName arg0) {
+            System.out.println("===================onServiceDisconnected=====================");
+        }
+    };
+
+    void init_walk(Calendar calendar)
+    {
+//        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+//        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+//        Boolean dailyNotify = sharedPref.getBoolean(SettingsActivity.KEY_PREF_DAILY_NOTIFICATION, true);
+        Boolean dailyNotify = true; // 무조건 알람을 사용
+
+        PackageManager pm = mActivity.getPackageManager();
+        ComponentName receiver = new ComponentName(mActivity, MyReceiver.class);
+        Intent alarmIntent = new Intent(mActivity, MyReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 0, alarmIntent, 0);
+        AlarmManager alarmManager = (AlarmManager) mActivity.getSystemService(Context.ALARM_SERVICE);
+
+
+        // 사용자가 매일 알람을 허용했다면
+        if (dailyNotify) {
+
+
+            if (alarmManager != null) {
+
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                        AlarmManager.INTERVAL_DAY, pendingIntent);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                }
+            }
+
+            // 부팅 후 실행되는 리시버 사용가능하게 설정
+            pm.setComponentEnabledSetting(receiver,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP);
+
+        }
+//        else { //Disable Daily Notifications
+//            if (PendingIntent.getBroadcast(this, 0, alarmIntent, 0) != null && alarmManager != null) {
+//                alarmManager.cancel(pendingIntent);
+//                //Toast.makeText(this,"Notifications were disabled",Toast.LENGTH_SHORT).show();
+//            }
+//            pm.setComponentEnabledSetting(receiver,
+//                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+//                    PackageManager.DONT_KILL_APP);
+//        }
+    }
+
+
     private ServiceConnection serviceConnection = new ServiceConnection() {
 
         @Override
         public void onServiceConnected(ComponentName arg0, IBinder binder) {
+            //MQTT서비스연결
             service = new Messenger(binder);
             mBound = true;
-
             msg = Message.obtain(null, MQTTservice.REGISTER);
             try {
                 service.send(msg);
@@ -94,6 +206,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 ToastUtils.ToastShow(getActivity(), getString(R.string.msg_mqtt_fetch_error));
                 if(AppConst.DEBUG_ALL) Log.w(AppConst.TAG, "MainActivity - MQTT ServiceConnection Failed!!!");
             }
+
         }
 
         @Override
@@ -126,6 +239,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onStart() {
         super.onStart();
+        mActivity = getActivity();
+        mContext = getContext();
+        mPackage = Package.getPackage("sleep.simdori.com.fragment");
         if(AppConst.DEBUG_ALL) Log.d(AppConst.TAG, "MainActivity - onStart()");
 
         if (!mBound) {
@@ -164,10 +280,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
         }
+
         // API
         customDialog_state = new CustomDialog_State(getActivity());
         queue = new LinkedList<Integer>();
-        pref = new SharedPrefUtil(getActivity());
+        pref = new SharedPrefUtil(getContext());
         device_mac = pref.getValue(SharedPrefUtil.DEVICE_MAC, "");
 
         dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -175,6 +292,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         dateFormat.setTimeZone(koreaTimeZone);
         date = new Date();
 
+        dbhandler = new DatabaseHandler(mContext);
+//        sqlDB = dbhandler.getReadableDatabase();
+//        dbhandler.onUpgrade(sqlDB,1,2);
+//        sqlDB.close();
         pref.put(SharedPrefUtil.DATE, dateFormat.format(date));
 
     }
@@ -191,10 +312,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         userNameTextView.setText(userNameValue);
 
         currentTime = (TextView) v.findViewById(R.id.currentTime);
+        countWalk = (TextView) v.findViewById(R.id.countWalk);
         dateFormat = new SimpleDateFormat("HH:mm");
         koreaTimeZone = TimeZone.getTimeZone("Asia/Seoul");
         dateFormat.setTimeZone(koreaTimeZone);
-
+        if(isWalkService) {
+            countWalk.setText(pref.getValue("step", -1));
+        }
         final Handler handler = new Handler(){
             public void handleMessage(Message msg){
                 date = new Date();
@@ -216,15 +340,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         };
         timer.schedule(timerTask, 0, 1000);
 
-        Button cameraBpmMeasureStartButton = (Button) v.findViewById(R.id.bpmMeasureButton);
+        cameraBpmMeasureStartButton = (Button) v.findViewById(R.id.bpmMeasureButton);
         cameraBpmMeasureStartButton.setOnClickListener(this);
-        Button mmWaveBpmMeasureStartButton = (Button) v.findViewById(R.id.mmWavebpmMeasureButton);
+        mmWaveBpmMeasureStartButton = (Button) v.findViewById(R.id.mmWavebpmMeasureButton);
         mmWaveBpmMeasureStartButton.setOnClickListener(this);
-        Button sleepMeasureStartButton = (Button) v.findViewById(R.id.sleepMeasureButton);
+        sleepMeasureStartButton = (Button) v.findViewById(R.id.sleepMeasureButton);
         sleepMeasureStartButton.setOnClickListener(this);
-        Button mmWaveBackupButton = (Button) v.findViewById(R.id.mmWaveBackupButton);
+        mmWaveBackupButton = (Button) v.findViewById(R.id.mmWaveBackupButton);
         mmWaveBackupButton.setOnClickListener(this);
-
+        chk_walkButton = (Button) v.findViewById(R.id.chk_walkButton);
+        chk_walkButton.setOnClickListener(this);
         return v;
     }
 
@@ -323,28 +448,73 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }
             case R.id.mmWavebpmMeasureButton:
             {
+                if(device_mac==""){
+                    Toast.makeText(getContext(),"등록된 기기가 없습니다.",Toast.LENGTH_LONG).show();
+                    ((HomeActivity)getActivity()).replaceFragment(HomeFragment.newInstance());
+                }
                 // mmWave를 통한 bpm 측정 추가 예정
                 break;
             }
             case R.id.sleepMeasureButton:
             {
-                publishTopic(AppConst.Topic + device_mac, AppConst.mmWaveStart);
+                if(device_mac==""){
+                    Toast.makeText(getContext(),"등록된 기기가 없습니다.",Toast.LENGTH_LONG).show();
+                    ((HomeActivity)getActivity()).replaceFragment(HomeFragment.newInstance());
+                }else{
+                    publishTopic(AppConst.Topic + device_mac, AppConst.mmWaveStart);
 
-                ((HomeActivity)getActivity()).replaceFragment(mmWaveSleepMeasureFragment.newInstance());
+                    ((HomeActivity)getActivity()).replaceFragment(mmWaveSleepMeasureFragment.newInstance());
+                }
+
                 break;
             }
             case R.id.mmWaveBackupButton:
             {
-                publishTopic(AppConst.Topic + device_mac, AppConst.mmWaveBackUp);
+                if(device_mac==""){
+                    Toast.makeText(getContext(),"등록된 기기가 없습니다.",Toast.LENGTH_LONG).show();
+                    ((HomeActivity)getActivity()).replaceFragment(HomeFragment.newInstance());
+                }else{
+                    publishTopic(AppConst.Topic + device_mac, AppConst.mmWaveBackUp);
 
-                Toast toast = Toast.makeText(getContext(), "mmWave BackUp Start", Toast.LENGTH_SHORT);
-                toast.show();
+                    Toast toast = Toast.makeText(getContext(), "mmWave BackUp Start", Toast.LENGTH_SHORT);
+                    toast.show();
+                    break;
+                }
                 break;
             }
+            case R.id.chk_walkButton: {
+                if (!isWalkService) {
+                    System.out.println("===================만보기 서비스시작=====================");
+                    isWalkService = true;
+                    wlak_service_intent = new Intent(mContext, WalkCountService.class);
+//                    mContext.startService(wlak_service_intent);
+//                    walkCountService = new WalkCountService();
+//                    walkCountService.setCallback(WalkCallback);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        mContext.startForegroundService(wlak_service_intent);
+                    } else {
+                        mContext.startService(wlak_service_intent);
+                    }
+//                    mActivity.bindService(wlak_service_intent, WalkserviceConnection, Context.BIND_AUTO_CREATE);
+                    countWalk.setVisibility(View.VISIBLE);
+                    countWalk.setText("걸음 수 : 0");
+                    chk_walkButton.setText("걸음 수 측정 종료");
 
-            
+                } else if (isWalkService) {
+                    isWalkService = false;
+//                    mActivity.unbindService(WalkserviceConnection);
+                    mContext.stopService(wlak_service_intent);
+                    countWalk.setVisibility(View.INVISIBLE);
+                    countWalk.setText("");
+                    chk_walkButton.setText("걸음 수 측정 시작");
+                    System.out.println("===================만보기 서비스종료=====================");
+                    System.out.println("걸음 수 초기화");
+                }
+                break;
+            }
         }
     }
+
 
 
 

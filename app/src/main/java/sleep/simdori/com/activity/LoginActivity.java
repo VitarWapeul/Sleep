@@ -99,9 +99,6 @@ public class LoginActivity extends AppCompatActivity {
 
     int RC_SIGN_IN = 9001;
 
-    //Google login
-    GoogleSignInOptions gso;
-    GoogleSignInClient mGoogleSignInClient;
 
 
 
@@ -217,8 +214,8 @@ public class LoginActivity extends AppCompatActivity {
         pwdEditText = (EditText) findViewById(R.id.loginInputPwd);
 
         loginButton = (Button) findViewById(R.id.loginButton);
-//        naverLoginButton = (LinearLayout) findViewById(R.id.naverLoginButton) ;
-//        googleLoginButton = (LinearLayout) findViewById(R.id.googleLoginButton);
+        naverLoginButton = (LinearLayout) findViewById(R.id.naverLoginButton) ;
+        googleLoginButton = (LinearLayout) findViewById(R.id.googleLoginButton);
 //        kakaoLoginButton = (LinearLayout) findViewById(R.id.kakaoLoginButton);
         signupButton = (Button) findViewById(R.id.gotoSignupButton);
         btnSearch = (Button) findViewById(R.id.findPwdButton);
@@ -237,7 +234,7 @@ public class LoginActivity extends AppCompatActivity {
         helper = new DatabaseHandler(LoginActivity.this);
         database = helper.getWritableDatabase();
 
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+
 
 //        // 플레이 스토어 버전을 확인하여 사용자에게 알림
 //        if (Network.getConnectivityStatus(mActivity)) Version_Check();
@@ -315,62 +312,22 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-//        //네이버로그인
-//        naverLoginButton.setOnClickListener(new Button.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                mContext = getApplicationContext();
-//
-//                mOAuthLoginModule = OAuthLogin.getInstance();
-//                mOAuthLoginModule.init(mContext ,getString(R.string.naver_client_id) ,getString(R.string.naver_client_secret) ,getString(R.string.naver_client_name));
-//
-//                @SuppressLint("HandlerLeak")
-//                OAuthLoginHandler mOAuthLoginHandler = new OAuthLoginHandler() {
-//                    @Override
-//                    public void run(boolean success) {
-//                        if (success) {
-//                            String accessToken = mOAuthLoginModule.getAccessToken(mContext);
-//                            String refreshToken = mOAuthLoginModule.getRefreshToken(mContext);
-//                            long expiresAt = mOAuthLoginModule.getExpiresAt(mContext);
-//                            String tokenType = mOAuthLoginModule.getTokenType(mContext);
-//
-//                            Log.i("LoginData","accessToken : "+ accessToken);
-//                            Log.i("LoginData","refreshToken : "+ refreshToken);
-//                            Log.i("LoginData","expiresAt : "+ expiresAt);
-//                            Log.i("LoginData","tokenType : "+ tokenType);
-//
-//                            Intent intent = new Intent(mContext, HomeActivity.class);
-//                            startActivity(intent);
-//                            finish();
-//                        } else {
-//                            String errorCode = mOAuthLoginModule
-//                                    .getLastErrorCode(mContext).getCode();
-//                            String errorDesc = mOAuthLoginModule.getLastErrorDesc(mContext);
-//                            Toast.makeText(mContext, "errorCode:" + errorCode
-//                                    + ", errorDesc:" + errorDesc, Toast.LENGTH_SHORT).show();
-//                        }
-//                    };
-//                };
-//
-//                mOAuthLoginModule.startOauthLoginActivity(LoginActivity.this, mOAuthLoginHandler);
-//
-//
-//            }
-//        });
-//        //구글로그인
-//        // Build a GoogleSignInClient with the options specified by gso.
-//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-//        // Check for existing Google Sign In account, if the user is already signed in
-//        // the GoogleSignInAccount will be non-null.
-//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-//
-//        googleLoginButton.setOnClickListener(new Button.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                signIn();
-//
-//            }
-//        });
+        //네이버로그인
+        naverLoginButton.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mContext = getApplicationContext();
+                snsLogin = new SNSLogin(mContext, LoginActivity.this, "naver");
+            }
+        });
+        //구글로그인
+
+        googleLoginButton.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                snsLogin = new SNSLogin(mContext, LoginActivity.this, "google");
+            }
+        });
         //카카오로그인
         // 초기화
 //        kakaoLoginButton.setOnClickListener(new Button.OnClickListener(){
@@ -543,6 +500,19 @@ public class LoginActivity extends AppCompatActivity {
             Log.e("name not found", e.toString());
         }
     }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //google 로그인결과
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {//로그인이 성공했다면
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            System.out.println("구글로그인 성공");
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            snsLogin.handleSignInResult(task);
+        }
+    }
     /**
      * 사용자가 입력한 아이디와 비밀번호로 로그인한다.
      *
@@ -560,11 +530,7 @@ public class LoginActivity extends AppCompatActivity {
 //		}
     }
 
-    private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
 
-    }
     // Configure sign-in to request the user's ID, email address, and basic
     // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
 
@@ -586,43 +552,7 @@ public class LoginActivity extends AppCompatActivity {
             System.out.println("두번째register");
         }
     }
-    //로그인결과
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {//로그인이 성공했다면
-            // The Task returned from this call is always completed, no need to attach
-            // a listener.
-            System.out.println("구글로그인 성공");
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
-        }
-    }
-
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-        try {
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);//여기서 구글유저정보를 받아옴
-            id = account.getEmail();//구글에서 가져올 id, 추후 적절한 값으로 수정필요
-            id = id.substring(0,id.indexOf("@"));
-            email = account.getEmail();//구글에서 가져올 email
-            token = account.getIdToken();
-            System.out.println("id : "+id+", email : "+email);
-            //db에 정보저장
-            register(id,email,"","");
-            // Signed in successfully, show authenticated UI.
-
-            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);//구글로그인하면 홈으로 화면 전환
-            startActivity(intent);
-            finish();
-
-        } catch (ApiException e) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            // google 로그인 실패시 처리
-        }
-    }
 
 //    /**
 //     * 현재 앱의 버전을 플레이 스토어와 비교하여, 사용자에게 알림을 준다.

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\wapeu\\.gradle\\caches\\transforms-2\\files-2.1\\a28c3c65b82bbf0d085fee47aaecdc0e\\jetified-play-services-auth-19.0.0\\res\\values-watch-v20\\values.xml",

@@ -23,7 +23,7 @@ import sleep.simdori.com.util.SharedPrefUtil;
 public class LoadingActivity extends AppCompatActivity {
 
     String[] permission_list = {
-            Manifest.permission.CAMERA
+            Manifest.permission.CAMERA, Manifest.permission.ACTIVITY_RECOGNITION
     };
 //    String[] permission_list = {
 //            Manifest.permission.CAMERA,
@@ -169,7 +169,8 @@ public class LoadingActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }else{
-                if (login_status == 1) {//자동로그인상태라면
+//                if (login_status == 1) {//자동로그인상태라면
+                if (true) {//자동로그인상태라면
                     Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(intent);
                     finish();

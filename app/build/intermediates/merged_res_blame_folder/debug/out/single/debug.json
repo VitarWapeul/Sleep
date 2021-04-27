@@ -1,614 +1,614 @@
 [
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_left_out_activity.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\move_left_out_activity.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\slide_out_right.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_checkbox3.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\login_checkbox3.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_like.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\like.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_guide_2nd.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_guide_2nd.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_bottom_left_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_bottom_left_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mic_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\mic_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_calendar.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\calendar.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_right_white.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_top_right_white.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_mmwave_sleep_measure.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_mmwave_sleep_measure.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_guide_2nd.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_guide_2nd.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_bottom_left_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_bottom_left_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_1.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\start_1.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_record_selected.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\record_selected.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_water_drop.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\water_drop.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_loading.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_loading.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_google_naver_login_btn.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\google_naver_login_btn.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_snoring_time_example.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\snoring_time_example.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_notifying.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\customdialog_notifying.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\home_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bpm_graph.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\bpm_graph.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bpm_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\bpm_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_webview.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\customdialog_webview.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_notify.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\customdialog_notify.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_good.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\good.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\play_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_view_white2.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_view_white2.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_left.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\slide_out_left.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_navigation_bar.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\menu\\bottom_navigation_bar.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_right_icons.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\right_icons.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_heart.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\heart.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_set_button_selected.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\set_button_selected.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_result.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_result.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_naver_login_icon.PNG.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\naver_login_icon.PNG"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\google_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pie_chart.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\pie_chart.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_checkbox.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\login_checkbox.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_setting.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\setting.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_left.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\slide_out_left.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bad.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\bad.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_left_out_activity.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\move_left_out_activity.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_right_white.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_top_right_white.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\play_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\back_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rotate_loading.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\rotate_loading.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_record_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\record_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_snoring_time_example.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\snoring_time_example.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_relaxation_black.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\relaxation_black.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\xml\\network_security_config.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_statusicon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\statusicon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\xml\\network_security_config.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_help.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\help.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_bottom_left_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_bottom_left_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_signup_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\signup_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_guide_1st.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_guide_1st.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_notifying.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\customdialog_notifying.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\color_bottom_navigation_bar_colors.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\color\\bottom_navigation_bar_colors.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_2.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\start_2.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_login_btn.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\login_btn.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sleep_start_time_example.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\sleep_start_time_example.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_edit_white3.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_edit_white3.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_diagnostic.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\diagnostic.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bpm_graph.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\bpm_graph.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_question.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\question.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_view_gray.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_view_gray.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_view_gray.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_view_gray.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bad.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\bad.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_bottom_left_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_bottom_left_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_setting.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_top_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_top_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_walk.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\walk.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_left_in_activity.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\move_left_in_activity.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sleep_time_exm.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\sleep_time_exm.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_naver_icon1.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\naver_icon1.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_kakao_login_btn.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\kakao_login_btn.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_test.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_test.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rotate_loading.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\rotate_loading.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\back_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_left_white.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_top_left_white.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\main_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_checkbox.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\btn_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_water_drop.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\water_drop.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_transparent.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\transparent.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\main_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_iotmanage.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_iotmanage.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home_unselected.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\home_unselected.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_calendar.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\calendar.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_right_out_activity.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\move_right_out_activity.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_style.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\button_style.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_statistic_example.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\statistic_example.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_user.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\user.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_diagnostic.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\diagnostic.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_setting.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_setting.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_search.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\customdialog_search.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_edit_white4.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_edit_white4.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_btn_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_btn_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mic_icon_2.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\mic_icon_2.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\slide_in_right.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_view_white3.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_view_white3.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_view_white2.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_view_white2.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mic_icon_2.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\mic_icon_2.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_right.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\slide_out_right.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_transparent.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\transparent.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_home.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_loding.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\img_loding.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_naver_icon1.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\naver_icon1.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_circular_progress_bar.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\circular_progress_bar.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_bottom_right_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_bottom_right_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_qna.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\qna.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_btn.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\start_btn.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_notify.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\customdialog_notify.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_help.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\help.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signup.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_signup.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_back.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\btn_back.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\slide_in_right.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_circle_shape.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\circle_shape.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_loding.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\img_loding.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_left_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_top_left_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_2.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\icon_2.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_bpmdetail.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_bpmdetail.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_naver_login_icon.PNG.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\naver_login_icon.PNG"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_set_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\set_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_noise_graph_1.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\noise_graph_1.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_search.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\customdialog_search.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_kakao_login_btn.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\kakao_login_btn.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_dynamic_bpm_result.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\dynamic_bpm_result.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_right_in_activity.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\move_right_in_activity.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_record.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_record.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mic_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\mic_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pie_chart.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\pie_chart.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backup_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\backup_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backup_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\backup_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_heart.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\heart.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_bpmdetail.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_bpmdetail.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_fade_red.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\fade_red.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_bottom_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_bottom_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_graph_example.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\graph_example.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_1.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\icon_1.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_dynamic_bpm_result.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\dynamic_bpm_result.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_right_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_top_right_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_checkbox3.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\login_checkbox3.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_graph_example.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\graph_example.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_noise_graph_1.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\noise_graph_1.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_edit_white4.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_edit_white4.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_fade_red.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\fade_red.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_right_out_activity.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\move_right_out_activity.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_modify.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_modify.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_left_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_top_left_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_1.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\start_1.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_user_bg.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\user_bg.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_2.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\icon_2.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_good.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\good.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_record.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_record.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bpm_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\bpm_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_btn.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\start_btn.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_help_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\help_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_monitoring_statistics.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_monitoring_statistics.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_circle_shape.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\circle_shape.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_record_selected.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\record_selected.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_checkbox.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\btn_checkbox.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_test.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_test.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inquiry_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\inquiry_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_back.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\btn_back.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_bottom_right_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_bottom_right_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_measure.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_measure.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_signup.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_right_in_activity.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\move_right_in_activity.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_description.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\description.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_pointing.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\pointing.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_bottom_right_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_bottom_right_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_user_bg.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\user_bg.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_question_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\question_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_qna.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\qna.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_walk.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\walk.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_bpmresult.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_bpmresult.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_statistic_example.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\statistic_example.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_style.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\button_style.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_top_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\round_top_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_navigation_bar.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\menu\\bottom_navigation_bar.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_login_btn.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\login_btn.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_mmwave_sleep_measure.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_mmwave_sleep_measure.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_google_naver_login_btn.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\google_naver_login_btn.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_smile.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\smile.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_bpmresult.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_bpmresult.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_camera.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\camera.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_circular_progress_bar.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\circular_progress_bar.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home_unselected.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\home_unselected.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sleep_time_exm.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\sleep_time_exm.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_1.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\icon_1.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_relaxation_black.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\relaxation_black.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_kakao_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\kakao_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_set_button_selected.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\set_button_selected.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_bottom_right_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_bottom_right_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_iotmanage.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_iotmanage.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_measure.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\fragment_measure.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_view_white3.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_view_white3.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_state.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\customdialog_state.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\anim\\slide_in_left.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sleep_tracking.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_sleep_tracking.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_right_icons.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\right_icons.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\border.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_webview.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\customdialog_webview.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_top.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\setting_top.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_right_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_top_right_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_checkbox.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\login_checkbox.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_signup_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\signup_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_monitoring_statistics.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_monitoring_statistics.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_statusicon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\statusicon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_register.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_question.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\question.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sleep_tracking.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\activity_sleep_tracking.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_set_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\set_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_customdialog_state.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\customdialog_state.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_setting.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\setting.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\google_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sleep_start_time_example.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\sleep_start_time_example.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_edit_white3.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\round_edit_white3.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\border.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_top_left_white.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_top_left_white.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_modify.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_modify.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_move_left_in_activity.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\move_left_in_activity.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_help_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\help_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_user.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\user.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_set_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\set_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_guide_1st.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_guide_1st.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_btn_black.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\round_btn_black.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\color_bottom_navigation_bar_colors.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\color\\bottom_navigation_bar_colors.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_camera.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\camera.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\anim\\slide_in_left.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_smile.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\smile.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_bottom_black.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\round_bottom_black.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_question_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\question_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_pointing.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable-v24\\pointing.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alert_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\alert_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inquiry_icon.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\inquiry_icon.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_kakao_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\kakao_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\home_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_2.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\start_2.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_like.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\like.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_record_button.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\record_button.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_loading.xml.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\layout\\activity_loading.xml"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable_set_button.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable\\set_button.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alert_icon.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\alert_icon.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_result.xml.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\layout\\fragment_result.xml"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_top.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\src\\main\\res\\drawable\\setting_top.png"
     },
     {
-        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_description.png.flat",
-        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool\\app\\src\\main\\res\\drawable-v24\\description.png"
+        "merged": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_foreground.png"
     }
 ]

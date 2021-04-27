@@ -40,7 +40,8 @@ public class AppConst {
 
     // URL - simdori
     public static final String simdori_Host = "simdori.com";
-    public static final String simdori_API_Host = "api.simdori.com";
+//    public static final String simdori_API_Host = "api.simdori.com";
+    public static final String simdori_API_Host = "121.125.61.122";
     public static final String simdori_MQTT_Host = "mqtt.simdori.com";
     //	public static final String 	simdori_Azure_Host		= "vitar.com";
 //	public static final String 	simdori_API_Host 		= simdori_Azure_Host;
