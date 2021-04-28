@@ -23,7 +23,7 @@ import sleep.simdori.com.util.SharedPrefUtil;
 public class LoadingActivity extends AppCompatActivity {
 
     String[] permission_list = {
-            Manifest.permission.CAMERA, Manifest.permission.ACTIVITY_RECOGNITION
+            Manifest.permission.CAMERA, Manifest.permission.ACTIVITY_RECOGNITION,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE
     };
 //    String[] permission_list = {
 //            Manifest.permission.CAMERA,

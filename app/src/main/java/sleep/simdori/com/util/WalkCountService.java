@@ -106,7 +106,7 @@ public class WalkCountService extends Service implements SensorEventListener {
                     .setSmallIcon(R.drawable.icon)
                     .setContentTitle("심도리")
                     .setContentIntent(pendingIntent)
-                    .setContentText("걸음 수 : 0");
+                    .setContentText("걸음 수 : --");
 
             // id 값은 0보다 큰 양수가 들어가야 한다.
             mNotificationManager.notify(1, notification.build());
@@ -167,8 +167,9 @@ public class WalkCountService extends Service implements SensorEventListener {
                 Intent intent = new Intent(MyReceiver.MY_ACTION);
                 intent.putExtra("step",mStepDetector);
                 sendBroadcast(intent);
-                notification.setContentText("걸음 수 : "+mStepDetector);
+                notification.setContentText("걸음 수 : " + mStepDetector);
                 mNotificationManager.notify(1, notification.build());
+                startForeground(1, notification.build());
                 pref.put("step",mStepDetector);
                 if (callback != null)
                     callback.onWalkCallback(mStepDetector);
@@ -177,7 +178,7 @@ public class WalkCountService extends Service implements SensorEventListener {
             }
         }
         else if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
-            mStepDetector += event.values[0];
+            mStepCountor += event.values[0];
             if (callback != null)
                 callback.onWalkCallback(mStepCountor);
             else System.out.println("WalkCountService - onSensorChanged : callback객체가 null입니다.");

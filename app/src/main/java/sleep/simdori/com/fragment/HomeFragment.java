@@ -2,6 +2,7 @@ package sleep.simdori.com.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -101,6 +102,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private int status = 0, mid_device = 0 ;
 
     //만보기
+    private String class_name = WalkCountService.class.getName(); // 서비스가 실행중인지 여부 확인을 위한 변수
     private DatabaseHandler dbhandler;
     private SQLiteDatabase sqlDB;
     private BroadcastReceiver mReciver;
@@ -142,6 +144,20 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             System.out.println("===================onServiceDisconnected=====================");
         }
     };
+
+    public  Boolean isWalkServiceRunning(String class_name){
+        //시스템 내부의 액티비티 상태를 파악하는 ActivityManager객체를 생성한다.
+        ActivityManager manager = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
+        //manager.getRunningServices(가져올 서비스 목록 개수) - 현재 시스템에서 동작중인 모든 서비르목록을 얻을 수 있다.
+        //리턴값은 List<ActivityManager.RunningServiceInfo>이다.
+        for(ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)){
+            //ActivityManager.RunningServiceInfo의 객체를 통해 현재 실행중인 서비스의 정보를 가져올 수 있다.
+            if(class_name.equals(service.service.getClassName())){
+                return true;
+            }
+        }
+        return false;
+    }
 
     void init_walk(Calendar calendar)
     {
@@ -316,9 +332,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         dateFormat = new SimpleDateFormat("HH:mm");
         koreaTimeZone = TimeZone.getTimeZone("Asia/Seoul");
         dateFormat.setTimeZone(koreaTimeZone);
-        if(isWalkService) {
-            countWalk.setText(pref.getValue("step", -1));
-        }
+
         final Handler handler = new Handler(){
             public void handleMessage(Message msg){
                 date = new Date();
@@ -350,6 +364,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mmWaveBackupButton.setOnClickListener(this);
         chk_walkButton = (Button) v.findViewById(R.id.chk_walkButton);
         chk_walkButton.setOnClickListener(this);
+//        if(isWalkServiceRunning(class_name)) {
+//            isWalkService = true;
+//            chk_walkButton.setText("걸음 수 측정 종료");
+//            countWalk.setText("걸음 수 : " + pref2.getValue("step", -1));
+//        }
         return v;
     }
 
