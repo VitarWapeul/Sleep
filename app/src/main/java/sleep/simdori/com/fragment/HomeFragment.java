@@ -2,23 +2,18 @@ package sleep.simdori.com.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
-import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Build;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.os.Handler;
 import android.os.IBinder;
@@ -35,7 +30,6 @@ import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.TimeZone;
@@ -45,25 +39,22 @@ import java.util.TimerTask;
 import sleep.simdori.com.AppConst;
 import sleep.simdori.com.R;
 import sleep.simdori.com.activity.HomeActivity;
-import sleep.simdori.com.activity.LoginActivity;
 import sleep.simdori.com.dialog.CustomDialog_State;
 import sleep.simdori.com.mqtt.MQTTservice;
-import sleep.simdori.com.util.DatabaseHandler;
-import sleep.simdori.com.util.MyReceiver;
 import sleep.simdori.com.util.SharedPrefUtil;
 import sleep.simdori.com.util.ToastUtils;
-import sleep.simdori.com.util.WalkCallback;
-import sleep.simdori.com.util.WalkCountService;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment implements View.OnClickListener, SensorEventListener {
 
     TimeZone koreaTimeZone;
     Date date = new Date();
+    Date yesterday = new Date(date.getTime()+(1000*60*60*24*-1));
+    DateFormat todaydateFormat;
     DateFormat dateFormat;
 
     // View
@@ -87,11 +78,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     // API
     private CustomDialog_State customDialog_state;
     private SharedPrefUtil pref = null;
-    private SharedPrefUtil pref2 = null;
     private LinkedList<Integer> queue = null;
     private Activity mActivity;
     private Context mContext;
     private Package mPackage;
+
+
     // MQTT
     private IntentFilter intentFilter 		= null;
     private Messenger service = null;
@@ -102,108 +94,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private int status = 0, mid_device = 0 ;
 
     //만보기
-    private String class_name = WalkCountService.class.getName(); // 서비스가 실행중인지 여부 확인을 위한 변수
-    private DatabaseHandler dbhandler;
-    private SQLiteDatabase sqlDB;
-    private BroadcastReceiver mReciver;
-    boolean WalkBtnToggle = false;
-    int step;
-    boolean isWalkService = false; // 서비스 중인 확인용
-    private WalkCountService walkCountService; // 서비스 클래스 객체를 선언
-    private Intent wlak_service_intent; //서비스 객체를 가지고 있는 인텐트 객체
-    private WalkCallback WalkCallback = new WalkCallback() { //서비스 내부로 Set되어 스텝카운트의 변화와 Unbind의 결과를 전달하는 콜백 객체의 구현체
-        @Override
-        public void onWalkCallback(int step) {
+    private SensorManager sensorManager;
+    private Sensor stepDetectorSensor;
+    private Sensor stepCountSensor;
+    private int mStepDetector;
+    private int mStepCountor;
+    int step=0;
 
-            System.out.println("HomeFragment - onWalkCallback호출");
-            countWalk.setText("오늘 걸음 수 : " + step);
-        }
-
-        @Override
-        public void onUnbindService() {
-            System.out.println("HomeFragment - onUnbindService호출");
-            isWalkService = false;
-
-            Toast.makeText(mActivity, "디스바인딩", Toast.LENGTH_SHORT).show();
-        }
-    };
-    //만보기서비스시작
-    private ServiceConnection WalkserviceConnection = new ServiceConnection() {
-
-        @Override
-        public void onServiceConnected(ComponentName arg0, IBinder binder) {
-            System.out.println("===================onServiceConnected=====================");
-            Toast.makeText(mActivity, "예스바인딩", Toast.LENGTH_SHORT).show();
-            WalkCountService.MyBinder mb = (WalkCountService.MyBinder) binder;
-            walkCountService = mb.getService(); //
-            walkCountService.setCallback(WalkCallback);
-
-        }
-        @Override
-        public void onServiceDisconnected(ComponentName arg0) {
-            System.out.println("===================onServiceDisconnected=====================");
-        }
-    };
-
-    public  Boolean isWalkServiceRunning(String class_name){
-        //시스템 내부의 액티비티 상태를 파악하는 ActivityManager객체를 생성한다.
-        ActivityManager manager = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
-        //manager.getRunningServices(가져올 서비스 목록 개수) - 현재 시스템에서 동작중인 모든 서비르목록을 얻을 수 있다.
-        //리턴값은 List<ActivityManager.RunningServiceInfo>이다.
-        for(ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)){
-            //ActivityManager.RunningServiceInfo의 객체를 통해 현재 실행중인 서비스의 정보를 가져올 수 있다.
-            if(class_name.equals(service.service.getClassName())){
-                return true;
-            }
-        }
-        return false;
+    public void setTextCountWalk( int step) {
+        countWalk.setText("걸음 수 : " + step);
     }
-
-    void init_walk(Calendar calendar)
-    {
-//        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-//        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-//        Boolean dailyNotify = sharedPref.getBoolean(SettingsActivity.KEY_PREF_DAILY_NOTIFICATION, true);
-        Boolean dailyNotify = true; // 무조건 알람을 사용
-
-        PackageManager pm = mActivity.getPackageManager();
-        ComponentName receiver = new ComponentName(mActivity, MyReceiver.class);
-        Intent alarmIntent = new Intent(mActivity, MyReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 0, alarmIntent, 0);
-        AlarmManager alarmManager = (AlarmManager) mActivity.getSystemService(Context.ALARM_SERVICE);
-
-
-        // 사용자가 매일 알람을 허용했다면
-        if (dailyNotify) {
-
-
-            if (alarmManager != null) {
-
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                        AlarmManager.INTERVAL_DAY, pendingIntent);
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-                }
-            }
-
-            // 부팅 후 실행되는 리시버 사용가능하게 설정
-            pm.setComponentEnabledSetting(receiver,
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                    PackageManager.DONT_KILL_APP);
-
-        }
-//        else { //Disable Daily Notifications
-//            if (PendingIntent.getBroadcast(this, 0, alarmIntent, 0) != null && alarmManager != null) {
-//                alarmManager.cancel(pendingIntent);
-//                //Toast.makeText(this,"Notifications were disabled",Toast.LENGTH_SHORT).show();
-//            }
-//            pm.setComponentEnabledSetting(receiver,
-//                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-//                    PackageManager.DONT_KILL_APP);
-//        }
-    }
-
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
 
@@ -293,6 +193,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.out.println("HomeFragment - onCreate호출");
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
         }
@@ -303,24 +204,42 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         pref = new SharedPrefUtil(getContext());
         device_mac = pref.getValue(SharedPrefUtil.DEVICE_MAC, "");
 
-        dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        todaydateFormat = new SimpleDateFormat("yyyy-MM-dd");
         koreaTimeZone = TimeZone.getTimeZone("Asia/Seoul");
-        dateFormat.setTimeZone(koreaTimeZone);
+        todaydateFormat.setTimeZone(koreaTimeZone);
         date = new Date();
-
-        dbhandler = new DatabaseHandler(mContext);
 //        sqlDB = dbhandler.getReadableDatabase();
 //        dbhandler.onUpgrade(sqlDB,1,2);
 //        sqlDB.close();
-        pref.put(SharedPrefUtil.DATE, dateFormat.format(date));
+        System.out.println("HomeFragment - onCreate_dateFormat.format(date) : " + todaydateFormat.format(date));
+        pref.put(SharedPrefUtil.DATE, todaydateFormat.format(date));
 
+//센서리스너등록
+        sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        stepDetectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
+        stepCountSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        if (stepDetectorSensor == null) {
+            sensorManager.registerListener(this, stepDetectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        } else {
+            sensorManager.registerListener(this, stepCountSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+// COUNTER
+
+        if (stepCountSensor == null) {
+            sensorManager.registerListener(this, stepCountSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        } else {
+            sensorManager.registerListener(this, stepDetectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        }
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        System.out.println("HomeFragment - onCreateView호출");
 
+        // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         userNameTextView = (TextView) v.findViewById(R.id.homeFragmentusername);
@@ -332,6 +251,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         dateFormat = new SimpleDateFormat("HH:mm");
         koreaTimeZone = TimeZone.getTimeZone("Asia/Seoul");
         dateFormat.setTimeZone(koreaTimeZone);
+
+        setTextCountWalk(step);
 
         final Handler handler = new Handler(){
             public void handleMessage(Message msg){
@@ -362,15 +283,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         sleepMeasureStartButton.setOnClickListener(this);
         mmWaveBackupButton = (Button) v.findViewById(R.id.mmWaveBackupButton);
         mmWaveBackupButton.setOnClickListener(this);
-        chk_walkButton = (Button) v.findViewById(R.id.chk_walkButton);
-        chk_walkButton.setOnClickListener(this);
-//        if(isWalkServiceRunning(class_name)) {
-//            isWalkService = true;
-//            chk_walkButton.setText("걸음 수 측정 종료");
-//            countWalk.setText("걸음 수 : " + pref2.getValue("step", -1));
-//        }
+
         return v;
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -501,36 +418,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             }
-            case R.id.chk_walkButton: {
-                if (!isWalkService) {
-                    System.out.println("===================만보기 서비스시작=====================");
-                    isWalkService = true;
-                    wlak_service_intent = new Intent(mContext, WalkCountService.class);
-//                    mContext.startService(wlak_service_intent);
-//                    walkCountService = new WalkCountService();
-//                    walkCountService.setCallback(WalkCallback);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        mContext.startForegroundService(wlak_service_intent);
-                    } else {
-                        mContext.startService(wlak_service_intent);
-                    }
-//                    mActivity.bindService(wlak_service_intent, WalkserviceConnection, Context.BIND_AUTO_CREATE);
-                    countWalk.setVisibility(View.VISIBLE);
-                    countWalk.setText("걸음 수 : 0");
-                    chk_walkButton.setText("걸음 수 측정 종료");
-
-                } else if (isWalkService) {
-                    isWalkService = false;
-//                    mActivity.unbindService(WalkserviceConnection);
-                    mContext.stopService(wlak_service_intent);
-                    countWalk.setVisibility(View.INVISIBLE);
-                    countWalk.setText("");
-                    chk_walkButton.setText("걸음 수 측정 시작");
-                    System.out.println("===================만보기 서비스종료=====================");
-                    System.out.println("걸음 수 초기화");
-                }
-                break;
-            }
         }
     }
 
@@ -567,6 +454,51 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             ToastUtils.ToastShow(getActivity(), getString(R.string.msg_mqtt_fetch_error));
             if(AppConst.DEBUG_ALL) Log.w(AppConst.TAG, "MainActivity - PublishTopic() / MQTT Topic and Message Required.");
         }
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        int y_step;
+        System.out.println("WalkCountService - onSensorChanged호출");
+        if (event.sensor.getType() == Sensor.TYPE_STEP_DETECTOR) {
+            if (event.values[0] == 1.0f) {
+                mStepDetector += event.values[0];
+                Log.e("스텝 디텍터", "" + event.values[0]);
+            }
+        }
+        else if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
+            mStepCountor = (int) event.values[0];
+            try {
+                y_step = pref.getValue("step"+(String)todaydateFormat.format(yesterday),-1);
+                pref.put("step"+todaydateFormat.format(date), mStepCountor);
+                System.out.println("HomeFragment_onSensorChanged - yesterday : "+ todaydateFormat.format(yesterday));
+                System.out.println("HomeFragment_onSensorChanged - date : "+ todaydateFormat.format(date));
+                System.out.println("HomeFragment_onSensorChanged - pref.getValue : "+ pref.getValue("step"+dateFormat.format(date),-1));
+                System.out.println("HomeFragment_onSensorChanged - y_step : "+ y_step);
+                System.out.println("HomeFragment_onSensorChanged - mStepCountor : "+ mStepCountor);
+                System.out.println("HomeFragment_onSensorChanged - pref.getValue(SharedPrefUtil.DATE, -1) : "+ pref.getValue(SharedPrefUtil.DATE, -1));
+
+                if(y_step > mStepCountor && y_step!= -1){
+                    step = mStepCountor;
+                    setTextCountWalk(step);
+                }else if(y_step<=mStepCountor && y_step != -1){
+                    step = mStepCountor-y_step;
+                    setTextCountWalk(step);
+                }else{
+                    step = mStepCountor;
+                    setTextCountWalk(step);
+                }
+            }catch (Exception e){
+
+            }
+            pref.put("step"+dateFormat.format(date),mStepCountor);
+            Log.e("스텝 카운트", "" + event.values[0]);
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
     }
 
     /**

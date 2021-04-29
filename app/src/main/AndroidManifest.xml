@@ -23,11 +23,7 @@
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sleep">
-        <receiver
-            android:name=".util.MyReceiver"
-            android:enabled="true"
-            android:exported="true"></receiver>
-        <!-- 로그인 스킵하기 위함 210422 -->
+
         <activity android:name=".activity.LoadingActivity">
 
             <!-- <activity android:name=".activity.HomeActivity"> -->
@@ -66,7 +62,6 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".util.WalkCountService"></service>
         <service android:name=".mqtt.MQTTservice"></service>
     </application>
 

@@ -65,8 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="bottom|center"
-            android:visibility="invisible"
-            android:text="걸음 수 : "
+            android:visibility="visible"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="45sp" />
         <TextView

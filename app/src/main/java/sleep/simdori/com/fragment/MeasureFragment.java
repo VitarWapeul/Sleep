@@ -466,7 +466,7 @@ public class MeasureFragment extends Fragment implements View.OnClickListener {
                 ProgHeart.setProgress(ProgP);
                 String strProgress = ProgP + " %";
                 tvProgressCircle.setText(strProgress);
-                Toast.makeText(getContext(),"손가락으로 카메라와 렌즈를 완전히 덮어주세요",Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"손가락으로 카메라와 렌즈를 완전히 덮어주세요",Toast.LENGTH_SHORT).show();
                 processing.set(false);
             }
             long endTime = System.currentTimeMillis();

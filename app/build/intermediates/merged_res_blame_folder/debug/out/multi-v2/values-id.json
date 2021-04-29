@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-id\\values-id.xml",
+            "outputFile": "C:\\Users\\wapeu\\AndroidStudioProjects\\simdori.com-coolcool_playground3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-id\\values-id.xml",
             "map": [
                 {
                     "source": "C:\\Users\\wapeu\\.gradle\\caches\\transforms-2\\files-2.1\\a58c6f788413e866ac258904be4ca678\\jetified-zxing-android-embedded-3.6.0\\res\\values-id\\values-id.xml",

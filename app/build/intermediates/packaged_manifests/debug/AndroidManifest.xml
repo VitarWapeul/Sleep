@@ -54,11 +54,6 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Sleep" >
-        <receiver
-            android:name="sleep.simdori.com.util.MyReceiver"
-            android:enabled="true"
-            android:exported="true" />
-        <!-- 로그인 스킵하기 위함 210422 -->
         <activity android:name="sleep.simdori.com.activity.LoadingActivity" >
 
             <!-- <activity android:name=".activity.HomeActivity"> -->
@@ -97,7 +92,6 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="sleep.simdori.com.util.WalkCountService" />
         <service android:name="sleep.simdori.com.mqtt.MQTTservice" />
 
         <activity

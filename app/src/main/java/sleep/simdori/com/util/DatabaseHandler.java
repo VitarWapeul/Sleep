@@ -1455,45 +1455,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		cursor.close();
 		return cursor.getCount();
 	}
-	/**
-	 * 현재 테이블에 저장된 스텝 카운트 데이터 가져오기
-	 * @return int : 스텝 카운트
-	 */
-	public int GetStepCount(String Date) {
-//		SELECT ( CASE WHEN EXISTS (SELECT STEP_DATE FROM TABLE_STEP WHERE STEP_DATE == Date) THEN '출력' ELSE '예외처리')
-		String countQuery = "SELECT " + STEP_COUNT + " FROM " + TABLE_STEP + "WHERE " + STEP_DATE + " == " + Date ;
-		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery(countQuery, null);
-		cursor.close();
-		return cursor.getCount();
-	}
-	/**
-	 * All CRUD(Create, Read, Update, Delete) Operation - 그룹 추가
-	 * @param 	contact : 그룹 정보
-	 * @throws 	None
-	 * @return 	None
-	 */
-	public void addStep(GetGroupList contact) {
-		SQLiteDatabase db = this.getWritableDatabase();
-
-		ContentValues values = new ContentValues();
-		values.put(KEY_GROUP_NAME, contact.getKeyGroupName());
-		values.put(KEY_GROUP_DEVICES, contact.getKeyGroupDevices());
-		values.put(KEY_GROUP_STATUS, contact.getKeyGroupStatus());
-		values.put(KEY_GROUP_SLEEPTIME, contact.getKeyGroupSleepTime());
-		values.put(KEY_GROUP_WAKEUPTIME, contact.getKeyGroupWakeupTime());
-		values.put(KEY_GROUP_SLEEPTIME_DAY, contact.getKeyGroupSleepDay());
-		values.put(KEY_GROUP_WAKEUPTIME_DAY, contact.getKeyGroupWakeupDay());
-		values.put(KEY_GROUP_INSOCKET, contact.getKeyGroupInSocket());
-		values.put(KEY_GROUP_OUTSOCKET, contact.getKeyGroupOutSocket());
-		values.put(KEY_GROUP_USER_ID, contact.getKeyUserID());
-
-		// 그룹 테이블에 추가
-		int status = (int) db.insert(TABLE_GROUP, null, values);
-		if(AppConst.DEBUG_ALL) Log.i(AppConst.TAG, "CustomListAdapter_Group - 그룹 추가: " + status);
-		// 데이터베이스 커넥션 닫기
-		db.close();
-	}
 
 
 
@@ -2123,6 +2084,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		// 데이터베이스 커넥션 닫기
 		db.close();
 	}
+
 
 //	/**
 //	 * All CRUD(Create, Read, Update, Delete) Operation - 장치삭제
