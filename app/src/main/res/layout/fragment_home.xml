@@ -113,14 +113,7 @@
             android:background="@drawable/start_btn"
             android:text="센서 백업"
             android:textColor="@color/white" />
-        <android.widget.Button
-            android:id="@+id/chk_walkButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/start_btn"
-            android:text="걸음 수 체크시작"
-            android:textColor="@color/white" />
+
 
 
 
